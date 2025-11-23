@@ -17,6 +17,7 @@
   HUGO_ENV = "production"
   HUGO_THEME = "repo"
   HUGO_BASEURL = "https://anatole-demo.netlify.app"
+  HUGO_SASS_DART = "true"
 
 [[headers]]
   for = "/*"
