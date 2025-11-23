@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Essay on My blog</title>
+    <link>http://localhost:1313/categories/essay/</link>
+    <description>Recent content in Essay on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 21 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/essay/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>😋 没错！点击这里！</title>
+      <link>http://localhost:1313/post/intro/</link>
+      <pubDate>Sat, 08 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/intro/</guid>
+      
+        <description>&lt;p&gt;快来了解我吧&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>为什么创建这个主页</title>
+      <link>http://localhost:1313/post/essay251121/</link>
+      <pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/essay251121/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>林郑月娥来海大做报告</title>
+      <link>http://localhost:1313/post/linzhengyuee/</link>
+      <pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/linzhengyuee/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

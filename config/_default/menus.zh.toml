@@ -1,0 +1,69 @@
+# config/_default/menus.zh.toml
+# 中文菜单（与英文完全对应，顺序、层级、identifier 完全一致）
+
+[[main]]
+name = "首页"
+identifier = "home"
+weight = 100
+url = "/"
+
+[[main]]
+name = "文章"
+weight = 200
+identifier = "posts"
+url = "/post/"
+
+# [[main]]
+# name = "作品集"
+# weight = 300
+# identifier = "portfolio"
+# url = "/portfolio/"
+
+[[main]]
+name = "分类"
+weight = 300
+identifier = "categories"
+url = "/categories/"
+
+[[main]]
+name = "关于我"
+weight = 400
+identifier = "about"
+url = "/about/"
+
+# [[main]]
+# name = "成就"
+# weight = 500
+# identifier = "accomplishments"
+
+# [[main]]
+# name = "获奖"
+# weight = 510
+# identifier = "awards"
+# url = "/awards/"
+# parent = "accomplishments"
+
+# [[main]]
+# name = "证书"
+# weight = 520
+# identifier = "certifications"
+# url = "/certifications/"
+# parent = "accomplishments"
+
+# [[main]]
+# name = "联系"
+# weight = 600
+# identifier = "contact"
+# url = "/contact/"
+
+[[main]]
+name = "工作经历"
+weight = 600
+identifier = "work"
+url = "/work/"
+
+[[footer]]
+name = "法律声明"
+weight = 1
+identifier = "imprint"
+url = "/imprint/"

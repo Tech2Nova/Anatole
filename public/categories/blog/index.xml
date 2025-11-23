@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on My blog</title>
+    <link>http://localhost:1313/categories/blog/</link>
+    <description>Recent content in Blog on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 19 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup LXC</title>
+      <link>http://localhost:1313/post/setup-lxc/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/setup-lxc/</guid>
+      
+        <description>在 Ubuntu 主机中创建 LXC 容器</description>
+      
+    </item>
+    
+    <item>
+      <title>Setup Hugo</title>
+      <link>http://localhost:1313/post/setup-hugo/</link>
+      <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/setup-hugo/</guid>
+      
+        <description>在 Windows 系统下，利用Scoop安装hugo</description>
+      
+    </item>
+    
+    <item>
+      <title>Setup KVM</title>
+      <link>http://localhost:1313/post/setup-kvm/</link>
+      <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/setup-kvm/</guid>
+      
+        <description>在 Ubuntu 主机中搭建 KVM 环境，并安装 QEMU Guest Agent</description>
+      
+    </item>
+    
+    <item>
+      <title>Ubuntu Disk Expansion</title>
+      <link>http://localhost:1313/post/setup-kvm/</link>
+      <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/setup-kvm/</guid>
+      
+        <description>对VMware 中的ubuntu进行磁盘扩容</description>
+      
+    </item>
+    
+  </channel>
+</rss>

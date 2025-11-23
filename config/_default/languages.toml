@@ -1,0 +1,25 @@
+[en]
+title = "My blog"
+weight = 1
+LanguageName = "English"
+contentDir = "content/english"
+
+
+[zh]
+title = "我的博客"                  # 中文站点标题
+weight = 2                         # 
+languageName = "中文（简体）"              # 语言切换按钮里显示这两个字（也可写 ZH）
+contentDir = "content/Chinese"          # ← 中文内容放这个文件夹
+languageDirection = "ltr"          # 中文从左到右
+
+
+
+[ar]
+title = "فلانة الفلانية"
+contentDir = "content/arabic"
+weight = 3
+LanguageDirection = "rtl"
+LanguageName = "AR"
+[ar.params]
+description = "أنا أعمل كمطورة ويب في شركة س"
+hidden = true

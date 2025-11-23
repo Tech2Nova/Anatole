@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>我的博客</title>
+    <link>http://localhost:1313/zh/</link>
+    <description>Recent content on 我的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 21 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/zh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>😋 没错！点击这里！</title>
+      <link>http://localhost:1313/zh/post/intro/</link>
+      <pubDate>Sat, 08 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/zh/post/intro/</guid>
+      
+        <description>&lt;p&gt;快来了解我吧&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/zh/about/</link>
+      <pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/zh/about/</guid>
+      
+        <description>党晨曦个人简介</description>
+      
+    </item>
+    
+    <item>
+      <title>Awards</title>
+      <link>http://localhost:1313/zh/awards/</link>
+      <pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/zh/awards/</guid>
+      
+        <description>chenxi Awards, an annual literary award for the best science fiction or fantasy works</description>
+      
+    </item>
+    
+    <item>
+      <title>为什么创建这个主页</title>
+      <link>http://localhost:1313/zh/post/essay251121/</link>
+      <pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/zh/post/essay251121/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Setup LXC</title>
+      <link>http://localhost:1313/zh/post/setup-lxc/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/zh/post/setup-lxc/</guid>
+      
+        <description>在 Ubuntu 主机中创建 LXC 容器</description>
+      
+    </item>
+    
+    <item>
+      <title>Setup Hugo</title>
+      <link>http://localhost:1313/zh/post/setup-hugo/</link>
+      <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/zh/post/setup-hugo/</guid>
+      
+        <description>在 Windows 系统下，利用Scoop安装hugo</description>
+      
+    </item>
+    
+    <item>
+      <title>Setup KVM</title>
+      <link>http://localhost:1313/zh/post/setup-kvm/</link>
+      <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/zh/post/setup-kvm/</guid>
+      
+        <description>在 Ubuntu 主机中搭建 KVM 环境，并安装 QEMU Guest Agent</description>
+      
+    </item>
+    
+    <item>
+      <title>Ubuntu Disk Expansion</title>
+      <link>http://localhost:1313/zh/post/setup-kvm/</link>
+      <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/zh/post/setup-kvm/</guid>
+      
+        <description>对VMware 中的ubuntu进行磁盘扩容</description>
+      
+    </item>
+    
+    <item>
+      <title>林郑月娥来海大做报告</title>
+      <link>http://localhost:1313/zh/post/linzhengyuee/</link>
+      <pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/zh/post/linzhengyuee/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>certifications</title>
+      <link>http://localhost:1313/zh/certifications/</link>
+      <pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/zh/certifications/</guid>
+      
+        <description>chenxi Certifications</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/zh/archives/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/zh/archives/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/zh/work/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/zh/work/</guid>
+      
+        <description>&lt;h3 id=&#34;学生工作&#34;&gt;学生工作&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;海南大学淳明书院第七党支部 支部副书记（2023–2025）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;定期组织“三会一课”&lt;/li&gt;
+&lt;li&gt;协助支部书记开展党员发展工作&lt;/li&gt;
+&lt;li&gt;推动党支部规范化、标准化建设&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;海南大学淳明书院36班 班长兼团支书（2022–2023）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;落实书院事务性工作&lt;/li&gt;
+&lt;li&gt;定期组织“主题团日”活动&lt;/li&gt;
+&lt;li&gt;开展团支部评优评先、团员发展等工作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;海南大学网络空间安全学院团委 干事（2021–2022）&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/zh/contact/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/zh/contact/</guid>
+      
+        <description>Contact Page</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/zh/imprint/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/zh/imprint/</guid>
+      
+        <description>&lt;h1 id=&#34;legal-disclosure&#34;&gt;Legal Disclosure&lt;/h1&gt;
+&lt;p&gt;Information in accordance with the applicable law&lt;/p&gt;
+&lt;p&gt;Jane Doe&lt;br&gt;
+Anatole Street 10&lt;br&gt;
+2016 GoHugo&lt;br&gt;
+Germany&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
