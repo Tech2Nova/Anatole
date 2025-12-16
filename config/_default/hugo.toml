@@ -61,6 +61,9 @@ enable = true
   [services.googleAnalytics]
     #ID = 'G-MEASUREMENT_ID'
 
-# 默认暗色主题
-# [params]
-#   darkMode = true
+#默认暗色主题
+[params]
+  darkMode = true
+  welcomeText = "欢迎访问"
+
+customCss = ["css/custom.css"]

@@ -42,6 +42,13 @@
         </li>
       {{ end }}
     </ul>
+  
   </div>
+
+  {{ with .Site.Params.welcomeText }}
+    <div class="welcome-text">
+      {{ . }}
+    </div>
+  {{ end }}
   {{- partial "footer.html" (dict "context" . "footerClassModifier" "sidebar") -}}
 </div>
