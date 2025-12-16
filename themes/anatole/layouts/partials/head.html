@@ -37,6 +37,7 @@
 
 
   <!-- CSS -->
+
   {{ $contentRatio := or site.Params.contentratio 0.6 -}}
   {{ $languageDirection := or site.Language.LanguageDirection "ltr" -}}
   {{ $vars := dict
@@ -252,4 +253,17 @@
       {{ end -}}
     {{ end -}}
   {{ end }}
+
+
+
+<style>
+  .welcome-text {
+      font-size: 2rem;
+      color: #cfcdcd;          /* 示例样式，根据需要改 */
+      text-align: center;
+      margin: 20px 0;
+      font-weight: bold;
+      /* 添加更多你想要的样式 */
+  }
+</style>
 </head>

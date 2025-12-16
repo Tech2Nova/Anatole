@@ -20,7 +20,7 @@ url = "/post/"
 # url = "/portfolio/"
 
 [[main]]
-name = "分类"
+name = "专题"
 weight = 300
 identifier = "categories"
 url = "/categories/"

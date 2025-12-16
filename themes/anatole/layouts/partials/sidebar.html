@@ -1,3 +1,4 @@
+
 <div
   class="sidebar{{ with .Site.Params.doNotLoadAnimations }}
     .
@@ -47,8 +48,9 @@
 
   {{ with .Site.Params.welcomeText }}
     <div class="welcome-text">
-      {{ . }}
+    {{ . | markdownify }}
     </div>
   {{ end }}
   {{- partial "footer.html" (dict "context" . "footerClassModifier" "sidebar") -}}
 </div>
+

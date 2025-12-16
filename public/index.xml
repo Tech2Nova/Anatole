@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My blog</title>
+    <title>我的博客</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on My blog</description>
+    <description>Recent content on 我的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh</language>
     <lastBuildDate>Fri, 21 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>😋 没错！点击这里！</title>
@@ -25,7 +25,7 @@
       
       <guid>http://localhost:1313/about/</guid>
       
-        <description>Profile of Dang Chenxi</description>
+        <description>党晨曦个人简介</description>
       
     </item>
     
@@ -135,10 +135,26 @@
       
       <guid>http://localhost:1313/work/</guid>
       
-        <description>&lt;h3 id=&#34;student-leadership--organizational-experience&#34;&gt;Student Leadership &amp;amp; Organizational Experience&lt;/h3&gt;
+        <description>&lt;h3 id=&#34;学生工作&#34;&gt;学生工作&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Deputy Secretary, 7th Party Branch, Chunming College, Hainan University (Student, 2023–2025)&lt;/p&gt;</description>
+&lt;p&gt;海南大学淳明书院第七党支部 支部副书记（2023–2025）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;定期组织“三会一课”&lt;/li&gt;
+&lt;li&gt;协助支部书记开展党员发展工作&lt;/li&gt;
+&lt;li&gt;推动党支部规范化、标准化建设&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;海南大学淳明书院36班 班长兼团支书（2022–2023）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;落实书院事务性工作&lt;/li&gt;
+&lt;li&gt;定期组织“主题团日”活动&lt;/li&gt;
+&lt;li&gt;开展团支部评优评先、团员发展等工作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;海南大学网络空间安全学院团委 干事（2021–2022）&lt;/p&gt;</description>
       
     </item>
     

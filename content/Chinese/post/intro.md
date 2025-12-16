@@ -4,6 +4,7 @@ title = "😋 没错！点击这里！"
 date = "2025-11-08"
 description = ""
 thumbnail= "images/landscape.jpg"
+# landscape尺寸为1920*677，3840*1354
 categories = ["Essay"]
 weight = -1
 +++

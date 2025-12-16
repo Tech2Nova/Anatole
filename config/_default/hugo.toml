@@ -1,6 +1,6 @@
 baseURL = "https://example.com"
 languageCode = "en"
-DefaultContentLanguage = "en"
+DefaultContentLanguage = "zh"
 title = "Website of Jane Doe"
 
 # theme as hugo module
@@ -64,6 +64,8 @@ enable = true
 #默认暗色主题
 [params]
   darkMode = true
-  welcomeText = "欢迎访问"
+  welcomeText = "👋 花径不曾缘客扫，蓬门今始为君开。"
 
-customCss = ["css/custom.css"]
+
+
+

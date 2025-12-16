@@ -1,13 +1,13 @@
 [en]
 title = "My blog"
-weight = 1
+weight = 2
 LanguageName = "English"
 contentDir = "content/english"
 
 
 [zh]
 title = "我的博客"                  # 中文站点标题
-weight = 2                         # 
+weight = 1                         # 
 languageName = "中文（简体）"              # 语言切换按钮里显示这两个字（也可写 ZH）
 contentDir = "content/Chinese"          # ← 中文内容放这个文件夹
 languageDirection = "ltr"          # 中文从左到右
