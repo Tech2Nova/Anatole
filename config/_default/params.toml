@@ -41,10 +41,10 @@ reversepagetitle = true # When set to 'true', the Window Title will be reversed 
 # hidesidebar = true
 
 # Sidebar/Content Ratio
-# contentratio = 0.6
+contentratio = 0.65
 
 [simpleAnalytics]
-# enable = true
+enable = true
 # customurl = "https://analytics.example.com"
 
 [plausibleAnalytics]

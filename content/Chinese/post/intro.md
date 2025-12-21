@@ -3,14 +3,13 @@ author = "chenxi"
 title = "😋 没错！点击这里！"
 date = "2025-11-08"
 description = ""
-thumbnail= "images/landscape.jpg"
+thumbnail= "images/landscape2.jpg"
 # landscape尺寸为1920*677，3840*1354
 categories = ["Essay"]
 weight = -1
 +++
 
 
-快来了解我吧
 <!--more-->
 
 

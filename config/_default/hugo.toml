@@ -63,7 +63,7 @@ enable = true
 
 #默认暗色主题
 [params]
-  darkMode = true
+  # darkMode = true
   welcomeText = "👋 花径不曾缘客扫，蓬门今始为君开。"
 
 

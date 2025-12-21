@@ -2,19 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/en/post/intro/</loc>
-    <lastmod>2025-11-08T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/post/intro/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/post/intro/"
-                />
-  </url><url>
     <loc>http://localhost:1313/en/</loc>
     <lastmod>2025-11-21T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -64,8 +51,21 @@
                 href="http://localhost:1313/en/awards/"
                 />
   </url><url>
+    <loc>http://localhost:1313/en/categories/blog/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/categories/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/categories/blog/"
+                />
+  </url><url>
     <loc>http://localhost:1313/en/categories/</loc>
-    <lastmod>2025-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -82,21 +82,8 @@
                 href="http://localhost:1313/en/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/categories/essay/</loc>
-    <lastmod>2025-11-21T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/categories/essay/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/categories/essay/"
-                />
-  </url><url>
     <loc>http://localhost:1313/en/tags/index/</loc>
-    <lastmod>2025-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -114,7 +101,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/en/post/</loc>
-    <lastmod>2025-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -131,8 +118,21 @@
                 href="http://localhost:1313/en/post/"
                 />
   </url><url>
+    <loc>http://localhost:1313/en/post/setup-lxc/</loc>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/post/setup-lxc/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/post/setup-lxc/"
+                />
+  </url><url>
     <loc>http://localhost:1313/en/tags/</loc>
-    <lastmod>2025-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -147,45 +147,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/en/tags/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/en/post/essay251121/</loc>
-    <lastmod>2025-11-21T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/post/essay251121/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/post/essay251121/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/en/categories/blog/</loc>
-    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/categories/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/categories/blog/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/en/post/setup-lxc/</loc>
-    <lastmod>2025-11-19T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/post/setup-lxc/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/post/setup-lxc/"
                 />
   </url><url>
     <loc>http://localhost:1313/en/post/setup-hugo/</loc>
@@ -225,19 +186,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/en/post/setup-kvm/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/en/post/linzhengyuee/</loc>
-    <lastmod>2025-03-24T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/post/linzhengyuee/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/post/linzhengyuee/"
                 />
   </url><url>
     <loc>http://localhost:1313/en/certifications/</loc>
