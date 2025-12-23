@@ -6,7 +6,7 @@
     <description>Recent content on 我的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 21 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>😋 没错！点击这里！</title>
       <link>http://localhost:1313/post/intro/</link>
@@ -15,6 +15,28 @@
       <guid>http://localhost:1313/post/intro/</guid>
       
         <description></description>
+      
+    </item>
+    
+    <item>
+      <title>关于大模型使用的随笔</title>
+      <link>http://localhost:1313/post/essay251223/</link>
+      <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/essay251223/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>25年冬至</title>
+      <link>http://localhost:1313/post/essay251222/</link>
+      <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/essay251222/</guid>
+      
+        <description>&lt;p&gt;差不多冬至 一早一晚还是有雨&amp;hellip;&lt;/p&gt;</description>
       
     </item>
     
