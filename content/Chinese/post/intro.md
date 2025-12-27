@@ -24,4 +24,4 @@ weight = -1
 
 开始于2025年11月
 
-三部分内容分别对应catagory列表下的Blog、Academic、Essay
+三部分内容分别对应专题列表下的Blog、Academic、Essay
