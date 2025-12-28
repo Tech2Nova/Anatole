@@ -1,7 +1,7 @@
 <!doctype html>
 <html
   dir="ltr"
-  lang="en"
+  lang="zh"
   data-theme=""
   
     class="html theme--light"
@@ -21,8 +21,9 @@
     content="Call me Chenxi"
   />
   
+
   
-        <link rel="stylesheet" href="/css/anatole.css" />
+        <link rel="stylesheet" href="/css/anatole.ltr.css" />
       
   <link
     rel="stylesheet"
@@ -72,7 +73,7 @@
 
   <link rel="canonical" href="http://localhost:1313/" />
   
-  <link rel="alternate" type="application/rss+xml" href="/index.xml" title="My blog" />
+  <link rel="alternate" type="application/rss+xml" href="/index.xml" title="我的博客" />
   
   
   
@@ -105,15 +106,15 @@
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/images/site-feature-image.png">
-  <meta name="twitter:title" content="My blog">
+  <meta name="twitter:title" content="我的博客">
 
 
 
   
   <meta property="og:url" content="http://localhost:1313/">
-  <meta property="og:site_name" content="My blog">
-  <meta property="og:title" content="My blog">
-  <meta property="og:locale" content="en">
+  <meta property="og:site_name" content="我的博客">
+  <meta property="og:title" content="我的博客">
+  <meta property="og:locale" content="zh">
   <meta property="og:type" content="website">
     <meta property="og:image" content="http://localhost:1313/images/site-feature-image.png">
 
@@ -124,7 +125,7 @@
     {
       "@context": "http://schema.org",
       "@type": "WebSite",
-      "name": "My blog",
+      "name": "我的博客",
       "url": "http:\/\/localhost:1313\/",
       "description": "Call me Chenxi",
       "thumbnailUrl": "http:\/\/localhost:1313\/",
@@ -139,6 +140,19 @@
   
   
   
+
+
+
+<style>
+  .welcome-text {
+      font-size: 2rem;
+      color: #878787;           
+      text-align: center;
+      margin: 20px 0;
+      font-weight: bold;
+       
+  }
+</style>
 </head>
 <body class="body">
     <div class="wrapper">
@@ -146,7 +160,8 @@
         
           class="wrapper__sidebar"
         
-      ><div
+      >
+<div
   class="sidebar
     animated fadeInDown
   "
@@ -220,7 +235,14 @@
         </li>
       
     </ul>
-  </div><footer class="footer footer__sidebar">
+  
+  </div>
+
+  
+    <div class="welcome-text">
+    👋 花径不曾缘客扫，蓬门今始为君开。
+    </div>
+  <footer class="footer footer__sidebar">
   <ul class="footer__list">
     <li class="footer__item">
       &copy;
@@ -237,7 +259,7 @@
           
           title=""
         >
-          imprint
+          法律声明
         </a>
       </li>
     
@@ -250,6 +272,7 @@
     integrity="sha256-lTG0oiF6cMWh/OicH4HJ673VhnCPzUEwtBcyDHIwyNY="
     crossorigin="anonymous"
   ></script></div>
+
 </aside>
       <main
         
@@ -281,7 +304,7 @@
               href="/"
               
               title=""
-              >Home</a
+              >首页</a
             >
           </li>
         
@@ -296,7 +319,7 @@
               href="/post/"
               
               title=""
-              >Posts</a
+              >文章</a
             >
           </li>
         
@@ -311,7 +334,7 @@
               href="/categories/"
               
               title=""
-              >categories</a
+              >专题</a
             >
           </li>
         
@@ -326,58 +349,8 @@
               href="/about/"
               
               title=""
-              >About</a
+              >关于我</a
             >
-          </li>
-        
-
-      
-        
-        
-
-          <li class="nav__list-item">
-            <div class="optionswitch">
-              <input class="optionswitch__picker" type="checkbox" id="4" hidden />
-
-              
-              
-                
-
-              
-                
-
-              
-
-
-              <label class="optionswitch__label" for="4"
-                >Accomplishments <i class="fa fa-angle-down" aria-hidden="true"></i
-              ></label>
-
-              <div class="optionswitch__triangle"></div>
-              <ul class="optionswitch__list">
-                
-                  <li class="optionswitch__list-item">
-                    
-                    <a
-                      href="/awards/"
-                      
-                      title=""
-                      >Awards</a
-                    >
-                  </li>
-                
-                  <li class="optionswitch__list-item">
-                    
-                    <a
-                      href="/certifications/"
-                      
-                      title=""
-                      >Certifications</a
-                    >
-                  </li>
-                
-              </ul>
-            </div>
           </li>
         
 
@@ -388,10 +361,10 @@
             
             <a
               
-              href="/contact/"
+              href="/work/"
               
               title=""
-              >Contact</a
+              >工作经历</a
             >
           </li>
         
@@ -404,17 +377,17 @@
           <div class="optionswitch">
             <input class="optionswitch__picker" type="checkbox" id="languagepicker" hidden />
             <label class="optionswitch__label" for="languagepicker"
-              >English <i class="fa fa-angle-down" aria-hidden="true"></i
+              >中文（简体） <i class="fa fa-angle-down" aria-hidden="true"></i
             ></label>
             <div class="optionswitch__triangle"></div>
             <ul class="optionswitch__list">
               
                 <li class="optionswitch__list-item">
-                  <a href="/zh/" title="中文（简体）"
+                  <a href="/en/" title="English"
                     ><span
                       
-                      aria-label="中文（简体）"
-                      >中文（简体）</span
+                      aria-label="English"
+                      >English</span
                     >
                   </a>
                 </li>
@@ -489,274 +462,18 @@ Remember that you can also specify a section header for the posts below by confi
       "
     >
       
-      <div class="post__content">
-        
-          <h3><a href="/post/series-part-1/">SERIES PART 1</a></h3>
-        
-        
-          <p>In this first part of the series we&rsquo;ll show you how to create a series
-</p>
-        
-        </div>
-
-      
-      <div class="post__footer">
-        <em class="fas fa-calendar-day"></em>
-        <span class="post__footer-date"
-          >
-            
-              14/8/2021
-            
-
-          </span
-        >
-        
-
-        
-      </div>
-    </div>
-  
-    <div
-      class="post 
-        animated fadeInDown
-      "
-    >
-      
-      <div class="post__content">
-        
-          <h3><a href="/post/redirect/">REDIRECT</a></h3>
-        
-        
-          <p>Forwarding to gohugo using redirectUrl
-</p>
-        
-        </div>
-
-      
-      <div class="post__footer">
-        <em class="fas fa-calendar-day"></em>
-        <span class="post__footer-date"
-          >
-            
-              20/6/2021
-            
-
-          </span
-        >
-        
-
-        
-          <span><a class="tag" href="/tags/redirect/">redirect</a><a class="tag" href="/tags/redirecturl/">redirectUrl</a></span>
-
-
-        
-      </div>
-    </div>
-  
-    <div
-      class="post 
-        animated fadeInDown
-      "
-    >
-      
-      <div class="post__content">
-        
-          <h3><a href="/post/figure-shortcode/">THE FIGURE SHORTCODE</a></h3>
-        
-        
-          <p>Hugo has figure shortcode built-in, so you can easily add figure captions or hyperlink rel attributes to images. Documentations can be found here:
-</p>
-        
-        </div>
-
-      
-      <div class="post__footer">
-        <em class="fas fa-calendar-day"></em>
-        <span class="post__footer-date"
-          >
-            
-              13/3/2021
-            
-
-          </span
-        >
-        
-
-        
-          <span><a class="tag" href="/tags/demo/">demo</a><a class="tag" href="/tags/shortcode/">shortcode</a></span>
-
-
-        
-      </div>
-    </div>
-  
-    <div
-      class="post 
-        animated fadeInDown
-      "
-    >
-      
-      <div class="post__content">
-        
-          <h3><a href="/post/markdown-syntax/">MARKDOWN SYNTAX GUIDE</a></h3>
-        
-        
-          <p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
-</p>
-        
-        </div>
-
-      
-      <div class="post__footer">
-        <em class="fas fa-calendar-day"></em>
-        <span class="post__footer-date"
-          >
-            
-              11/3/2019
-            
-
-          </span
-        >
-        
-
-        
-          <span><a class="tag" href="/tags/markdown/">markdown</a><a class="tag" href="/tags/css/">css</a><a class="tag" href="/tags/html/">html</a></span>
-
-
-        
-      </div>
-    </div>
-  
-    <div
-      class="post 
-        animated fadeInDown
-      "
-    >
-      
-      <div class="post__content">
-        
-          <h3><a href="/post/rich-content/">RICH CONTENT</a></h3>
-        
-        
-          <p>Hugo ships with several Built-in Shortcodes for rich content, along with a Privacy Config and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.
-</p>
-        
-        </div>
-
-      
-      <div class="post__footer">
-        <em class="fas fa-calendar-day"></em>
-        <span class="post__footer-date"
-          >
-            
-              10/3/2019
-            
-
-          </span
-        >
-        
-
-        
-          <span><a class="tag" href="/tags/shortcodes/">shortcodes</a><a class="tag" href="/tags/privacy/">privacy</a></span>
-
-
-        
-      </div>
-    </div>
-  
-    <div
-      class="post 
-        animated fadeInDown
-      "
-    >
-      
-      <div class="post__content">
-        
-          <h3><a href="/post/placeholder-text/">PLACEHOLDER TEXT</a></h3>
-        
-        
-          <p>Lorem est tota propiore conpellat pectoribus de pectora summo.
-</p>
-        
-        </div>
-
-      
-      <div class="post__footer">
-        <em class="fas fa-calendar-day"></em>
-        <span class="post__footer-date"
-          >
-            
-              9/3/2019
-            
-
-          </span
-        >
-        
-
-        
-          <span><a class="tag" href="/tags/markdown/">markdown</a><a class="tag" href="/tags/text/">text</a></span>
-
-
-        
-      </div>
-    </div>
-  
-    <div
-      class="post 
-        animated fadeInDown
-      "
-    >
-      
-      <div class="post__content">
-        
-          <h3><a href="/post/emoji-support/">EMOJI SUPPORT</a></h3>
-        
-        
-          <p>Emoji can be enabled in a Hugo project in a number of ways.
-</p>
-        
-        </div>
-
-      
-      <div class="post__footer">
-        <em class="fas fa-calendar-day"></em>
-        <span class="post__footer-date"
-          >
-            
-              5/3/2019
-            
-
-          </span
-        >
-        
-
-        
-          <span><a class="tag" href="/tags/emoji/">emoji</a></span>
-
-
-        
-      </div>
-    </div>
-  
-    <div
-      class="post 
-        animated fadeInDown
-      "
-    >
-      
         <div class="post__thumbnail-wrapper">
-          <a href="/post/image-test/">
-            <img class="post__thumbnail" src="/images/landscape.jpg" alt="Thumbnail image" loading="lazy" />
+          <a href="/post/linzhengyuee/">
+            <img class="post__thumbnail" src="/images/linzhengyuee/feature.png" alt="Thumbnail image" loading="lazy" />
           </a>
         </div>
       
       <div class="post__content">
         
-          <h3><a href="/post/image-test/">GUIDE TO THUMBNAILS IN HUGO</a></h3>
+          <h3><a href="/post/linzhengyuee/">林郑月娥来海大做报告</a></h3>
         
         
-          <p>Thumbnails can be enabled easily by setting the thumbnail parameter in the frontmatter to an image such as &quot;images/landscape.jpg&quot;.
-</p>
+          <p></p>
         
         </div>
 
@@ -766,16 +483,16 @@ Remember that you can also specify a section header for the posts below by confi
         <span class="post__footer-date"
           >
             
-              4/3/2019
+              2025年03月24日
             
 
           </span
         >
         
+          <span><a class="category" href="/categories/essay/">Essay</a></span>
+
 
         
-          <span><a class="tag" href="/tags/thumbnail/">thumbnail</a></span>
-
 
         
       </div>
@@ -832,7 +549,7 @@ Remember that you can also specify a section header for the posts below by confi
           
           title=""
         >
-          imprint
+          法律声明
         </a>
       </li>
     
@@ -844,5 +561,9 @@ Remember that you can also specify a section header for the posts below by confi
     src="/js/medium-zoom.min.9531b4a2217a70c5a1fce89c1f81c9ebbdd586708fcd4130b417320c7230c8d6.js"
     integrity="sha256-lTG0oiF6cMWh/OicH4HJ673VhnCPzUEwtBcyDHIwyNY="
     crossorigin="anonymous"
-  ></script></body>
+  ></script>
+  <script async defer src=" https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" /></noscript>
+
+</body>
 </html>
