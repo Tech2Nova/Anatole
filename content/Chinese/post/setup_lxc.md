@@ -63,13 +63,13 @@ root@host:~# lxc-create --name mycontainer --template download -- --dist ubuntu 
 
 创建容器后，您可以启动它。
 
-```
+```bash
 root@host:~# lxc-start --name mycontainer
 ```
 
 您可以查看有关容器的状态信息。
 
-```
+```bash
 root@host:~# lxc-info --name mycontainer
 Name:           mycontainer
 State:          RUNNING
@@ -83,7 +83,7 @@ Total bytes:   3.66 KiB
 
 您可以查看所有容器的状态信息。
 
-```
+```bash
 root@host:~# lxc-ls --fancy
 NAME        STATE   AUTOSTART GROUPS IPV4       IPV6 UNPRIVILEGED 
 mycontainer RUNNING 0         -      10.0.3.224 -    false
@@ -91,25 +91,25 @@ mycontainer RUNNING 0         -      10.0.3.224 -    false
 
 LXC容器只提供命令行面板，lxc-attach命令启动容器 shell。
 
-```
+```bash
 root@host:~# lxc-attach --name mycontainer
 ```
 
 退出容器 shell。
 
-```
+```bash
 root@mycontainer:~# exit
 ```
 
 您可以停止容器。
 
-```
+```bash
 root@host:~# lxc-stop --name mycontainer
 ```
 
 如果您不再需要该容器，则可以永久销毁它。
 
-```
+```bash
 root@host:~# lxc-destroy --name mycontainer
 ```
 
@@ -121,13 +121,13 @@ root@host:~# lxc-destroy --name mycontainer
 
 首先在host中创建一个共享文件夹（记得赋予权限，chmod +x）
 
-```
+```bash
 root@host:~# mkdir -p /home/mz/Desktop/lxc-share 
 ```
 
 然后编辑容器配置文件
 
-```
+```bash
 vim /var/lib/lxc/encrypt/config
 
 #在最后一行追加以下内容
@@ -147,7 +147,7 @@ lxc.mount.entry = /home/mz/Desktop/lxc-share /var/lib/lxc/mycontainer/rootfs/mnt
 
 ！！注意，拍摄快照时，容器一定要是停止状态
 
-```
+```bash
 lxc-snapshot mycontainer
 ```
 
@@ -155,20 +155,20 @@ lxc-snapshot mycontainer
 
 查看当前存在的快照
 
-```
+```bash
 sudo lxc-snapshot -L -n 你的容器名          # 列出所有快照
 ```
 
 恢复快照
 
-```
+```bash
 # 恢复并覆盖原容器
 sudo lxc-snapshot -r 快照名 -n 你的容器名
 ```
 
 删除快照
 
-```
+```bash
 sudo lxc-snapshot -d 快照名 -n 你的容器名
 ```
 

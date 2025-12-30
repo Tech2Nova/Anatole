@@ -127,7 +127,7 @@ sudo mv bpftrace /usr/local/bin/
 
 在宿主机运行下面这个脚本，这个脚本只运行一次，并且运行完不会关闭lxc容器，进程信息保存在容器内home目录下
 
-```
+```bash
 #!/bin/bash
 
 CONTAINER="example"

@@ -35,6 +35,26 @@
     type="text/css"
   />
   
+    
+    
+    <link
+      rel="stylesheet"
+      href="/css/chroma-github.min.a968f0f04450fa39b333459807fbe64fe349f702243723da32a2274d98e47edd.css"
+      integrity="sha256-qWjw8ERQ&#43;jmzM0WYB/vmT&#43;NJ9wIkNyPaMqInTZjkft0="
+      crossorigin="anonymous"
+      media="screen"
+    />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/css/custom.min.ea4eedd7216c464b396f3452571684816478956522664d7f4071d634bc025602.css"
+      integrity="sha256-6k7t1yFsRks5bzRSVxaEgWR4lWUiZk1/QHHWNLwCVgI="
+      crossorigin="anonymous"
+      media="screen"
+    />
+  
   
   <link
     rel="stylesheet"
@@ -507,7 +527,7 @@
 <p>在windows系统下配置hugo环境，需要一个软件包管理工具</p>
 <p>hugo官方推荐了三种工具</p>
 <p><a href="https://chocolatey.org/">Chocolatey</a> is a free and open-source package manager for Windows. To install the extended edition of Hugo:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">choco install hugo-extended
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">choco install hugo-extended
 </span></span></code></pre></div><p><a href="https://scoop.sh/">Scoop</a> is a free and open-source package manager for Windows. To install the extended edition of Hugo:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">scoop install hugo-extended
 </span></span></code></pre></div><p><a href="https://learn.microsoft.com/en-us/windows/package-manager/">Winget</a> is Microsoft’s official free and open-source package manager for Windows. To install the extended edition of Hugo:</p>
@@ -522,26 +542,26 @@
 </li>
 </ul>
 <p>本文选择scoop安装：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#在PowerShell中设置远程权限
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#在PowerShell中设置远程权限</span>
 </span></span><span class="line"><span class="cl">Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 设置环境变量
-</span></span><span class="line"><span class="cl">$env:SCOOP=&#39;D:\Applications\Scoop&#39;
-</span></span><span class="line"><span class="cl">[Environment]::SetEnvironmentVariable(&#39;SCOOP&#39;, $env:SCOOP, &#39;User&#39;)
-</span></span><span class="line"><span class="cl">$env:SCOOP_GLOBAL=&#39;F:\GlobalScoopApps&#39;
-</span></span><span class="line"><span class="cl">[Environment]::SetEnvironmentVariable(&#39;SCOOP_GLOBAL&#39;, $env:SCOOP_GLOBAL, &#39;Machine&#39;)
+</span></span><span class="line"><span class="cl"><span class="c1"># 设置环境变量</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$env</span>:SCOOP<span class="o">=</span><span class="s1">&#39;D:\Applications\Scoop&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Environment<span class="o">]</span>::SetEnvironmentVariable<span class="o">(</span><span class="s1">&#39;SCOOP&#39;</span>, <span class="nv">$env</span>:SCOOP, <span class="s1">&#39;User&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$env</span>:SCOOP_GLOBAL<span class="o">=</span><span class="s1">&#39;F:\GlobalScoopApps&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Environment<span class="o">]</span>::SetEnvironmentVariable<span class="o">(</span><span class="s1">&#39;SCOOP_GLOBAL&#39;</span>, <span class="nv">$env</span>:SCOOP_GLOBAL, <span class="s1">&#39;Machine&#39;</span><span class="o">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">#需要科学上网
+</span></span><span class="line"><span class="cl"><span class="c1">#需要科学上网</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">#运行下列命令
-</span></span><span class="line"><span class="cl">iex &#34;&amp; {$(irm get.scoop.sh)} -RunAsAdmin&#34;
+</span></span><span class="line"><span class="cl"><span class="c1">#运行下列命令</span>
+</span></span><span class="line"><span class="cl">iex <span class="s2">&#34;&amp; {</span><span class="k">$(</span>irm get.scoop.sh<span class="k">)</span><span class="s2">} -RunAsAdmin&#34;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">#默认安装 scoop install &lt;软件名&gt;
+</span></span><span class="line"><span class="cl"><span class="c1">#默认安装 scoop install &lt;软件名&gt;</span>
 </span></span><span class="line"><span class="cl">scoop install hugo-entend
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># global目录下安装：scoop install -g &lt;软件名&gt;
+</span></span><span class="line"><span class="cl"><span class="c1"># global目录下安装：scoop install -g &lt;软件名&gt;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 添加软件库
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加软件库</span>
 </span></span><span class="line"><span class="cl">scoop bucket add &lt;bucketname&gt;
 </span></span></code></pre></div><h3 id="2选择hugo-blox模板保存至本地">2、选择hugo blox模板保存至本地</h3>
 <p><a href="https://hugoblox.com/templates/">25+ Best, Most Popular Hugo Themes for 2024 | Hugo Blox</a></p>

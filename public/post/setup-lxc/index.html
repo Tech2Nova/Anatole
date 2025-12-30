@@ -35,6 +35,26 @@
     type="text/css"
   />
   
+    
+    
+    <link
+      rel="stylesheet"
+      href="/css/chroma-github.min.a968f0f04450fa39b333459807fbe64fe349f702243723da32a2274d98e47edd.css"
+      integrity="sha256-qWjw8ERQ&#43;jmzM0WYB/vmT&#43;NJ9wIkNyPaMqInTZjkft0="
+      crossorigin="anonymous"
+      media="screen"
+    />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/css/custom.min.ea4eedd7216c464b396f3452571684816478956522664d7f4071d634bc025602.css"
+      integrity="sha256-6k7t1yFsRks5bzRSVxaEgWR4lWUiZk1/QHHWNLwCVgI="
+      crossorigin="anonymous"
+      media="screen"
+    />
+  
   
   <link
     rel="stylesheet"
@@ -530,39 +550,39 @@
 <li>Architecture: amd64</li>
 </ul>
 <p>创建容器后，您可以启动它。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@host:~# lxc-start --name mycontainer
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-start --name mycontainer
 </span></span></code></pre></div><p>您可以查看有关容器的状态信息。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@host:~# lxc-info --name mycontainer
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-info --name mycontainer
 </span></span><span class="line"><span class="cl">Name:           mycontainer
 </span></span><span class="line"><span class="cl">State:          RUNNING
-</span></span><span class="line"><span class="cl">PID:            3250
+</span></span><span class="line"><span class="cl">PID:            <span class="m">3250</span>
 </span></span><span class="line"><span class="cl">IP:             10.0.3.224
 </span></span><span class="line"><span class="cl">Link:           vethgmeH9z
 </span></span><span class="line"><span class="cl">TX bytes:      1.51 KiB
 </span></span><span class="line"><span class="cl">RX bytes:      2.15 KiB
 </span></span><span class="line"><span class="cl">Total bytes:   3.66 KiB
 </span></span></code></pre></div><p>您可以查看所有容器的状态信息。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@host:~# lxc-ls --fancy
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-ls --fancy
 </span></span><span class="line"><span class="cl">NAME        STATE   AUTOSTART GROUPS IPV4       IPV6 UNPRIVILEGED 
-</span></span><span class="line"><span class="cl">mycontainer RUNNING 0         -      10.0.3.224 -    false
+</span></span><span class="line"><span class="cl">mycontainer RUNNING <span class="m">0</span>         -      10.0.3.224 -    <span class="nb">false</span>
 </span></span></code></pre></div><p>LXC容器只提供命令行面板，lxc-attach命令启动容器 shell。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@host:~# lxc-attach --name mycontainer
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-attach --name mycontainer
 </span></span></code></pre></div><p>退出容器 shell。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@mycontainer:~# exit
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@mycontainer:~# <span class="nb">exit</span>
 </span></span></code></pre></div><p>您可以停止容器。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@host:~# lxc-stop --name mycontainer
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-stop --name mycontainer
 </span></span></code></pre></div><p>如果您不再需要该容器，则可以永久销毁它。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@host:~# lxc-destroy --name mycontainer
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-destroy --name mycontainer
 </span></span></code></pre></div><h5 id="14-lxc容器配置">1.4 LXC容器配置</h5>
 <p>容器的文件系统活动仅限于 <code>/var/lib/lxc/&lt;container-name&gt;/rootfs</code></p>
 <p>如果想实现在主机和容器之间共享某些文件，您可以创建容器外部的主机卷，然后将该卷挂载到容器内部。</p>
 <p>首先在host中创建一个共享文件夹（记得赋予权限，chmod +x）</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@host:~# mkdir -p /home/mz/Desktop/lxc-share 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# mkdir -p /home/mz/Desktop/lxc-share 
 </span></span></code></pre></div><p>然后编辑容器配置文件</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">vim</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">lxc</span><span class="o">/</span><span class="n">encrypt</span><span class="o">/</span><span class="n">config</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /var/lib/lxc/encrypt/config
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">#在最后一行追加以下内容</span>
-</span></span><span class="line"><span class="cl"><span class="n">lxc</span><span class="o">.</span><span class="n">mount</span><span class="o">.</span><span class="n">entry</span> <span class="o">=</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">mz</span><span class="o">/</span><span class="n">Desktop</span><span class="o">/</span><span class="n">lxc</span><span class="o">-</span><span class="n">share</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">lxc</span><span class="o">/</span><span class="n">mycontainer</span><span class="o">/</span><span class="n">rootfs</span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">share</span> <span class="n">none</span> <span class="n">bind</span><span class="p">,</span><span class="n">create</span><span class="o">=</span><span class="n">dir</span> <span class="mi">0</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">lxc.mount.entry <span class="o">=</span> /home/mz/Desktop/lxc-share /var/lib/lxc/mycontainer/rootfs/mnt/share none bind,create<span class="o">=</span>dir <span class="m">0</span> <span class="m">0</span>
 </span></span></code></pre></div><p>说明：</p>
 <ul>
 <li>lxc.mount.entry 是 LXC 的标准挂载语法</li>
@@ -573,15 +593,15 @@
 <p>配置容器后，重新启动它以使用新配置。</p>
 <h5 id="15-lxc容器快照">1.5 LXC容器快照</h5>
 <p>！！注意，拍摄快照时，容器一定要是停止状态</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">lxc-snapshot mycontainer
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lxc-snapshot mycontainer
 </span></span></code></pre></div><p>生成的快照存放在/var/lib/lxc/你的容器名/snaps/中，快照名称依次从snap0, snap1 &hellip; snapn</p>
 <p>查看当前存在的快照</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo lxc-snapshot -L -n 你的容器名          # 列出所有快照
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo lxc-snapshot -L -n 你的容器名          <span class="c1"># 列出所有快照</span>
 </span></span></code></pre></div><p>恢复快照</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 恢复并覆盖原容器
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 恢复并覆盖原容器</span>
 </span></span><span class="line"><span class="cl">sudo lxc-snapshot -r 快照名 -n 你的容器名
 </span></span></code></pre></div><p>删除快照</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo lxc-snapshot -d 快照名 -n 你的容器名
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo lxc-snapshot -d 快照名 -n 你的容器名
 </span></span></code></pre></div><p>参考文档：</p>
 <p><a href="https://linuxcontainers.cn/lxc/getting-started/">Linux 容器 - LXC - 入门 - Linux 容器</a></p>
 <p><a href="https://www.runoob.com/linux/linux-comm-lxc.html">Linux lxc 命令 | 菜鸟教程</a></p>

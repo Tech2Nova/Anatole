@@ -21,7 +21,7 @@ hugo官方推荐了三种工具
 
 [Chocolatey](https://chocolatey.org/) is a free and open-source package manager for Windows. To install the extended edition of Hugo:
 
-```sh
+```bash
 choco install hugo-extended
 ```
 
@@ -44,7 +44,7 @@ winget install Hugo.Hugo.Extended
 
 本文选择scoop安装：
 
-```
+```bash
 #在PowerShell中设置远程权限
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
