@@ -6,24 +6,13 @@
     <description>Recent content on 我的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 30 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>😋 没错！点击这里！</title>
       <link>http://localhost:1313/post/%E6%B2%A1%E9%94%99%E7%82%B9%E5%87%BB%E8%BF%99%E9%87%8C/</link>
       <pubDate>Sat, 08 Nov 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/post/%E6%B2%A1%E9%94%99%E7%82%B9%E5%87%BB%E8%BF%99%E9%87%8C/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>碎碎念！</title>
-      <link>http://localhost:1313/post/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</link>
-      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/post/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</guid>
       
         <description></description>
       
@@ -252,6 +241,25 @@
 Anatole Street 10&lt;br&gt;
 2016 GoHugo&lt;br&gt;
 Germany&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/post/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</guid>
+      
+        <description>&lt;!-- +++
+author = &#34;chenxi&#34;
+title = &#34;碎碎念！&#34;
+date = &#34;2025-12-27&#34;
+description = &#34;&#34;
+categories = [&#34;Essay&#34;]
+thumbnail= &#34;images/flower.jpg&#34;
+weight = -9
++++ --&gt;</description>
       
     </item>
     
