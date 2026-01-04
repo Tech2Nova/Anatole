@@ -9,6 +9,7 @@ thumbnail= "images/neimeng/caoyuan13.jpg"
 
 
 <!--more-->
+**DAY2**
 
 
 **先来几张照片，别管拍的怎么样，情谊永在嘿嘿**
@@ -62,4 +63,39 @@ thumbnail= "images/neimeng/caoyuan13.jpg"
 <br>
 <br>
 
-**黄花沟**
+**DAY3**
+
+**去火山的路上，正好遇到夕阳**
+
+<br>
+<video controls style="width:75%; display:block; margin: 0 auto;">
+  <source src="/images/neimeng/chejing1.mov">
+</video>
+<br>
+
+<br>
+<video controls style="width:75%; display:block; margin: 0 auto;">
+  <source src="/images/neimeng/chejing2.mov">
+</video>
+<br>
+
+
+**火山**
+
+<br>
+<video controls style="width:50%; display:block; margin: 0 auto;">
+  <source src="/images/neimeng/ying.mov">
+</video>
+<br>
+
+**第一次见到野生的鹰，自由翱翔，鹰击长空**
+
+
+<br>
+<video controls style="width:75%; display:block; margin: 0 auto;">
+  <source src="/images/neimeng/huoshan1.mov">
+</video>
+<br>
+
+
+**朋友的运镜怎么说（手动狗头）**

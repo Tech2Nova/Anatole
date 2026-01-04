@@ -9,6 +9,8 @@ thumbnail= "images/neimeng/museum1.jpg"
 
 
 <!--more-->
+**DAY1**
+
 **早上7点起床，去吃烧麦，还得是和朋友出来玩呀，吃住的想法都非常统一，和家人出来估计他们起不了这么早，而且恐怕不会为了吃早点，步行半个小时，这家烧麦是在当地比较出名的一家，吃起来确实不错，我们三个吃了4笼好像**
 
 
@@ -75,3 +77,4 @@ thumbnail= "images/neimeng/museum1.jpg"
 <img src="/images/neimeng/tonghua2.jpg" style="width:75%; display:block; margin:auto;">
 <br>
 
+**未完，后续有时间添加山西的部分**
