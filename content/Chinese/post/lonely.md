@@ -1,6 +1,6 @@
 +++
 author = "chenxi"
-title = "慢慢习惯独自前行"
+title = "把期待留给2026！"
 date = "2026-01-01"
 description = ""
 categories = ["思考"]
