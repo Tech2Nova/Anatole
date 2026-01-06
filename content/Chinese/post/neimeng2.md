@@ -69,13 +69,13 @@ thumbnail= "images/neimeng/caoyuan13.jpg"
 
 <br>
 <video controls style="width:75%; display:block; margin: 0 auto;">
-  <source src="/images/neimeng/chejing1.mov">
+  <source src="/images/neimeng/chejing1.mp4">
 </video>
 <br>
 
 <br>
 <video controls style="width:75%; display:block; margin: 0 auto;">
-  <source src="/images/neimeng/chejing2.mov">
+  <source src="/images/neimeng/chejing2.mp4">
 </video>
 <br>
 
@@ -84,7 +84,7 @@ thumbnail= "images/neimeng/caoyuan13.jpg"
 
 <br>
 <video controls style="width:50%; display:block; margin: 0 auto;">
-  <source src="/images/neimeng/ying.mov">
+  <source src="/images/neimeng/ying.mp4">
 </video>
 <br>
 
@@ -93,7 +93,7 @@ thumbnail= "images/neimeng/caoyuan13.jpg"
 
 <br>
 <video controls style="width:75%; display:block; margin: 0 auto;">
-  <source src="/images/neimeng/huoshan1.mov">
+  <source src="/images/neimeng/huoshan1.mp4">
 </video>
 <br>
 
