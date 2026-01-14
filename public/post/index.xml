@@ -19,6 +19,17 @@
     </item>
     
     <item>
+      <title>碎碎念！</title>
+      <link>http://localhost:1313/post/train/</link>
+      <pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/train/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
       <title>把期待留给2026！</title>
       <link>http://localhost:1313/post/lonely/</link>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
@@ -213,25 +224,6 @@
       <guid>http://localhost:1313/post/linzhengyuee/</guid>
       
         <description></description>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/post/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</guid>
-      
-        <description>&lt;!-- +++
-author = &#34;chenxi&#34;
-title = &#34;碎碎念！&#34;
-date = &#34;2025-12-27&#34;
-description = &#34;&#34;
-categories = [&#34;Essay&#34;]
-thumbnail= &#34;images/flower.jpg&#34;
-weight = -9
-+++ --&gt;</description>
       
     </item>
     
