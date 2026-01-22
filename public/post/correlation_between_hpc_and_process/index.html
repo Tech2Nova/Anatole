@@ -128,7 +128,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/images/site-feature-image.png">
   <meta name="twitter:title" content="HPC数据与进程执行行为的关联分析">
-  <meta name="twitter:description" content="Correlation analysis between HPC data and process execution behavior">
+  <meta name="twitter:description" content="Call me Chenxi">
 
 
 
@@ -136,7 +136,7 @@
   <meta property="og:url" content="http://localhost:1313/post/correlation_between_hpc_and_process/">
   <meta property="og:site_name" content="我的博客">
   <meta property="og:title" content="HPC数据与进程执行行为的关联分析">
-  <meta property="og:description" content="Correlation analysis between HPC data and process execution behavior">
+  <meta property="og:description" content="Call me Chenxi">
   <meta property="og:locale" content="zh">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -160,7 +160,7 @@
         "alternativeHeadline": "",
         "description": "
       
-        \u003cp\u003eCorrelation analysis between HPC data and process execution behavior\u003c\/p\u003e
+        
 
 
       
@@ -216,7 +216,7 @@
 
     ,
         "url" : "http:\/\/localhost:1313\/post\/correlation_between_hpc_and_process\/",
-        "wordCount" : "347",
+        "wordCount" : "338",
         "genre" : [ 
       
       "Blog"
@@ -502,8 +502,7 @@
             <span class="post__meta-text"></span>
           </li>
         </ul>
-      <p>Correlation analysis between HPC data and process execution behavior</p>
-<p>本研究提出了一种可视化框架，能够实现硬件性能计数器（HPCs）与进程执行行为的关联分析。该框架由以下三个核心组件构成： (1) 运行进程快照的构建； (2) 按进程过滤 HPC 数据； (3) 将合并后的 HPC 事件计数与进程执行细节呈现在统一的时间线图表中。 下文将对每个组件进行详细介绍和讨论。</p>
+      <p>本研究提出了一种可视化框架，能够实现硬件性能计数器（HPCs）与进程执行行为的关联分析。该框架由以下三个核心组件构成： (1) 运行进程快照的构建； (2) 按进程过滤 HPC 数据； (3) 将合并后的 HPC 事件计数与进程执行细节呈现在统一的时间线图表中。 下文将对每个组件进行详细介绍和讨论。</p>
 <h4 id="进程快照process-snapshot">进程快照（Process Snapshot）</h4>
 <p>勒索软件在执行过程中，通常会启动多个自身进程实例以及外部进程来完成攻击目标。在利用硬件性能计数器进行侧信道分析时，明确哪些运行进程对性能计数器的数值做出了贡献、以及这些进程中哪些与勒索软件执行直接相关，具有重要意义。为此，我们在数据采集期间以固定间隔对系统中正在运行的进程列表进行快照，并仅保留试验开始后新出现的进程。这些快照为后续分析提供了宝贵的关联信息，能够推断父子进程关系，并实现对每个进程的 HPC 指标进行独立归因。</p>
 <h4 id="数据采集process-filtering">数据采集（Process Filtering）</h4>

@@ -1,9 +1,9 @@
 +++
 author = "chenxi"
 title = "健身记录"
-date = "2025-01-15"
+date = "2026-01-15"
 description = ""
-categories = ["Essay"]
+categories = ["动态"]
 thumbnail= "images/flower.jpg"
 weight = -9
 +++

@@ -10,8 +10,6 @@
   <meta charset="utf-8" />
   <title>
     
-      
-        Posts |
       Chenxi Dang
 
   </title>
@@ -93,9 +91,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
 
-  <link rel="canonical" href="http://localhost:1313/post/" />
+  <link rel="canonical" href="http://localhost:1313/" />
   
-  <link rel="alternate" type="application/rss+xml" href="/post/index.xml" title="我的博客" />
+  <link rel="alternate" type="application/rss+xml" href="/index.xml" title="我的博客" />
   
   
   
@@ -128,16 +126,14 @@
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/images/site-feature-image.png">
-  <meta name="twitter:title" content="Posts">
-  <meta name="twitter:description" content="Call me Chenxi">
+  <meta name="twitter:title" content="我的博客">
 
 
 
   
-  <meta property="og:url" content="http://localhost:1313/post/">
+  <meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="我的博客">
-  <meta property="og:title" content="Posts">
-  <meta property="og:description" content="Call me Chenxi">
+  <meta property="og:title" content="我的博客">
   <meta property="og:locale" content="zh">
   <meta property="og:type" content="website">
     <meta property="og:image" content="http://localhost:1313/images/site-feature-image.png">
@@ -145,7 +141,19 @@
 
 
   
-  
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": "我的博客",
+      "url": "http:\/\/localhost:1313\/",
+      "description": "Call me Chenxi",
+      "thumbnailUrl": "http:\/\/localhost:1313\/",
+      "license": ""
+      
+    }
+  </script>
+
 
 
 
@@ -187,7 +195,9 @@
       />
       
         <div class="sidebar__introduction-title">
-          <a href="/">I&#39;m Chenxi Dang</a>
+          <h1>
+            <a href="/">I&#39;m Chenxi Dang</a>
+          </h1>
         </div>
       
       <div class="sidebar__introduction-description">
@@ -309,6 +319,8 @@
             
             <a
               
+                class="nav__link--active"
+              
               href="/"
               
               title=""
@@ -323,8 +335,6 @@
           <li class="nav__list-item">
             
             <a
-              
-                class="nav__link--active"
               
               href="/post/"
               
@@ -393,7 +403,7 @@
             <ul class="optionswitch__list">
               
                 <li class="optionswitch__list-item">
-                  <a href="/en/post/" title="English"
+                  <a href="/en/" title="English"
                     ><span
                       
                       aria-label="English"
@@ -403,7 +413,7 @@
                 </li>
               
                 <li class="optionswitch__list-item">
-                  <a href="/ar/post/" title="AR"
+                  <a href="/ar/" title="AR"
                     ><span
                       
                       aria-label="AR"
@@ -430,339 +440,122 @@
 </div>
 </header>
   <div
-    class="archive 
+    class="post 
       animated fadeInDown
     "
   >
-    
-      <div class="archive__heading">2026</div>
-      
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/train/" title="健身记录">健身记录</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2026年01月15日
-                
+    <div class="post__content">
+      <!--
+This file is left intentionally empty by default to be backwards compatible with the initial theme setup.
 
-              
-            </div>
-          </li>
-        </ul>
-      
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/lonely/" title="把期待留给2026！">把期待留给2026！</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2026年01月01日
-                
+Although the theme has advanced a little bit and it now allows to specify the content on the main page (even if the list of posts/articles is not intended).
+This can be:
+- with the list of posts/articles (default: `mainSections = ["post"]) or
+- without the list of posts/articles (by setting `mainSections = [""]`)
 
-              
-            </div>
-          </li>
-        </ul>
-      
+Markdown supported, ie:
+
+```
+# Welcome
+
+- Hugo :rocket:
+- Hugo theme :rocket:
+
+Don't forget to check the README.md file!
+```
+
+Remember that you can also specify a section header for the posts below by configuring the `mainSectionsTitle` parameter in the front matter of this file.
+-->
+
+    </div>
 
     
-      <div class="archive__heading">2025</div>
-      
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/father_ill/" title="生活改变方向的那一刻">生活改变方向的那一刻</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2025年12月31日
-                
+  </div>
 
-              
-            </div>
-          </li>
-        </ul>
-      
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/bilibili2025/" title="BiliBili年度总结">BILIBILI年度总结</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2025年12月27日
-                
+  
 
-              
-            </div>
-          </li>
-        </ul>
+  
+  
+    <div
+      class="post 
+        animated fadeInDown
+      "
+    >
       
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/workflow-visio/" title="visio绘制流程图">VISIO绘制流程图</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2025年12月24日
-                
-
-              
-            </div>
-          </li>
-        </ul>
+        <div class="post__thumbnail-wrapper">
+          <a href="/post/linzhengyuee/">
+            <img class="post__thumbnail" src="/images/linzhengyuee/feature.png" alt="Thumbnail image" loading="lazy" />
+          </a>
+        </div>
       
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/llm/" title="当所有人都用上大模型，博客还重要吗？">当所有人都用上大模型，博客还重要吗？</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2025年12月23日
-                
+      <div class="post__content">
+        
+          <h3><a href="/post/linzhengyuee/">林郑月娥来海大做报告</a></h3>
+        
+        
+          <p></p>
+        
+        </div>
 
-              
-            </div>
-          </li>
-        </ul>
       
-        <ul class="archive__list">
-          <li class="archive__list-item">
+      <div class="post__footer">
+        <em class="fas fa-calendar-day"></em>
+        <span class="post__footer-date"
+          >
             
-              <a class="archive__list-title" href="/post/music_eason/" title="何时葡萄先熟透">何时葡萄先熟透</a>
+              2025年03月24日
             
-            <div class="archive__list-date">
-              
-                
-                  2025年12月22日
-                
 
-              
-            </div>
-          </li>
-        </ul>
+          </span
+        >
+        
+          <span><a class="category" href="/categories/%E5%8A%A8%E6%80%81/">动态</a></span>
+
+
+        
+
+        
+      </div>
+    </div>
+  
+  <div class="pagination">
+    
+  <ul class="pagination__list">
+    
+    
+    
+      <li class="pagination__list-item">
+        <a class="page-link" href="/page/2/">
+          <i class="fa fa-angle-left" aria-label="Previous"></i>
+        </a>
+      </li>
+    
+    
       
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/correlation_between_hpc_and_process/" title="HPC数据与进程执行行为的关联分析">HPC数据与进程执行行为的关联分析</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2025年12月10日
-                
-
-              
-            </div>
-          </li>
-        </ul>
-      
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/collect_hpc_in_lxc/" title="在 LXC 容器中收集HPC数据">在 LXC 容器中收集HPC数据</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2025年11月26日
-                
-
-              
-            </div>
-          </li>
-        </ul>
-      
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/website_idea/" title="写给未来的自己，也顺便给路过的人">写给未来的自己，也顺便给路过的人</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2025年11月21日
-                
-
-              
-            </div>
-          </li>
-        </ul>
-      
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/setup-lxc/" title="Setup LXC">SETUP LXC</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2025年11月19日
-                
-
-              
-            </div>
-          </li>
-        </ul>
-      
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/click_here/" title="😋 没错！点击这里！">😋 没错！点击这里！</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2025年11月08日
-                
-
-              
-            </div>
-          </li>
-        </ul>
-      
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/wujunjie/" title="与武老师再聚">与武老师再聚</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2025年09月02日
-                
-
-              
-            </div>
-          </li>
-        </ul>
-      
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/neimeng2/" title="内蒙游玩（2）- 自驾辉腾锡勒大草原">内蒙游玩（2）- 自驾辉腾锡勒大草原</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2025年08月10日
-                
-
-              
-            </div>
-          </li>
-        </ul>
-      
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/neimeng1/" title="内蒙游玩（1）">内蒙游玩（1）</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2025年08月08日
-                
-
-              
-            </div>
-          </li>
-        </ul>
-      
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/sanya/" title="自驾三亚-三亚湾路线">自驾三亚-三亚湾路线</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2025年06月15日
-                
-
-              
-            </div>
-          </li>
-        </ul>
-      
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/setup-hugo/" title="Setup Hugo">SETUP HUGO</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2025年04月15日
-                
-
-              
-            </div>
-          </li>
-        </ul>
-      
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/setup-kvm/" title="Ubuntu Disk Expansion">UBUNTU DISK EXPANSION</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2025年03月30日
-                
-
-              
-            </div>
-          </li>
-        </ul>
-      
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/setup-kvm/" title="Setup KVM">SETUP KVM</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2025年03月30日
-                
-
-              
-            </div>
-          </li>
-        </ul>
-      
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            
-              <a class="archive__list-title" href="/post/linzhengyuee/" title="林郑月娥来海大做报告">林郑月娥来海大做报告</a>
-            
-            <div class="archive__list-date">
-              
-                
-                  2025年03月24日
-                
-
-              
-            </div>
-          </li>
-        </ul>
+        <li class="pagination__list-item">
+          <a class="page-link" href="/">1</a>
+        </li>
       
 
     
+      
+        <li class="pagination__list-item">
+          <a class="page-link" href="/page/2/">2</a>
+        </li>
+      
+
+    
+      
+        <li class="pagination__list-item">
+          <span class="page-link current">3</span>
+        </li>
+      
+
+    
+    
+  </ul>
+
+
   </div>
 
       </main>
