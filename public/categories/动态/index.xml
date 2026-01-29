@@ -6,13 +6,35 @@
     <description>Recent content in 动态 on 我的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 27 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/%E5%8A%A8%E6%80%81/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/%E5%8A%A8%E6%80%81/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>😋 没错！点击这里！</title>
       <link>http://localhost:1313/post/click_here/</link>
       <pubDate>Sat, 08 Nov 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/post/click_here/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>健身记录</title>
+      <link>http://localhost:1313/post/train/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/train/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>icassp被拒</title>
+      <link>http://localhost:1313/post/icassp_reject/</link>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/icassp_reject/</guid>
       
         <description></description>
       

@@ -4,7 +4,7 @@ title = "生活改变方向的那一刻"
 date = "2025-12-31"
 description = ""
 categories = ["思考"]
-thumbnail= "images/family.jpg"
+thumbnail= "images/alone.jpg"
 +++
 
 

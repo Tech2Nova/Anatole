@@ -1,13 +1,13 @@
 +++
 author = "chenxi"
 title = "健身记录"
-date = "2026-01-15"
+date = "2025-09-28"
 description = ""
 categories = ["动态"]
 thumbnail= "images/flower.jpg"
 weight = -9
 +++
-
+持续更新...
 <!--more-->
 
 ## 📉 体重变化记录（2025.09.28–2025.11.08）
@@ -106,12 +106,12 @@ new Chart(ctx, {
 <br>
 <img src="/images/train/260113-1.png" style="width:75%; display:block; margin:auto;">
 <br>
-<br>
+<!-- <br>
 <img src="/images/train/260113-2.png" style="width:75%; display:block; margin:auto;">
-<br>
+<br> -->
 
 
 
-持续更新中....
+
 
 

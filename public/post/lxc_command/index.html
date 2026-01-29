@@ -1,0 +1,673 @@
+<!doctype html>
+<html
+  dir="ltr"
+  lang="zh"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <title>
+    
+      
+        Linux LXC容器使用 |
+      Chenxi Dang
+
+  </title>
+
+  <meta name="generator" content="Hugo 0.152.2"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Chenxi Dang" />
+  <meta
+    name="description"
+    content="Call me Chenxi"
+  />
+  
+
+  
+        <link rel="stylesheet" href="/css/anatole.ltr.css" />
+      
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/css/chroma-github.min.a968f0f04450fa39b333459807fbe64fe349f702243723da32a2274d98e47edd.css"
+      integrity="sha256-qWjw8ERQ&#43;jmzM0WYB/vmT&#43;NJ9wIkNyPaMqInTZjkft0="
+      crossorigin="anonymous"
+      media="screen"
+    />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/css/custom.min.ea4eedd7216c464b396f3452571684816478956522664d7f4071d634bc025602.css"
+      integrity="sha256-6k7t1yFsRks5bzRSVxaEgWR4lWUiZk1/QHHWNLwCVgI="
+      crossorigin="anonymous"
+      media="screen"
+    />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.10cb17328b3207590ce3d89fb482e7cd6937d8138cef2059c69cabd65ab7d6c6.css"
+    integrity="sha256-EMsXMosyB1kM49iftILnzWk32BOM7yBZxpyr1lq31sY="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.7aa4d559d5fadcfed666b5679be54d0dbbcf6a0542742319765b253d2797cc44.css"
+    integrity="sha256-eqTVWdX63P7WZrVnm&#43;VNDbvPagVCdCMZdlslPSeXzEQ="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.a699c3ab02229020e2d51dfe6c9a4cc556fd7781edbc166e2af9d0db9d5c66ce.css"
+    integrity="sha256-ppnDqwIikCDi1R3&#43;bJpMxVb9d4HtvBZuKvnQ251cZs4="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.1d88b60c86c4bb253fa4d4c085d27f7ee1f6eca544f7b50b227a2e63fbcfbaaa.css"
+    integrity="sha256-HYi2DIbEuyU/pNTAhdJ/fuH27KVE97ULInouY/vPuqo="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="http://localhost:1313/post/lxc_command/" />
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.8724ddf9268dee451060f191961647573c7f592fbccc6d858746236b3f915813.js"
+      integrity="sha256-hyTd&#43;SaN7kUQYPGRlhZHVzx/WS&#43;8zG2Fh0Yjaz&#43;RWBM="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+  
+
+  
+
+
+  
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/site-feature-image.png">
+  <meta name="twitter:title" content="Linux LXC容器使用">
+  <meta name="twitter:description" content="在 Ubuntu 主机中使用 LXC 容器的各类情况">
+
+
+
+  
+  <meta property="og:url" content="http://localhost:1313/post/lxc_command/">
+  <meta property="og:site_name" content="我的博客">
+  <meta property="og:title" content="Linux LXC容器使用">
+  <meta property="og:description" content="在 Ubuntu 主机中使用 LXC 容器的各类情况">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2026-01-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-01-20T00:00:00+00:00">
+    <meta property="og:image" content="http://localhost:1313/images/site-feature-image.png">
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "Linux LXC容器使用",
+        "headline": "Linux LXC容器使用",
+        "alternativeHeadline": "",
+        "description": "
+      
+        \u003cp\u003e在 Ubuntu 主机中使用 LXC 容器的各类情况\u003c\/p\u003e
+
+
+      
+
+
+    ",
+        "license": "",
+        
+        "inLanguage": "zh",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/post\/lxc_command\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "chenxi"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "chenxi"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "chenxi"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "chenxi"
+        },
+        "dateCreated": "2026-01-20T00:00:00.00Z",
+        "datePublished": "2026-01-20T00:00:00.00Z",
+        "dateModified": "2026-01-20T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "chenxi",
+            "url": "http://localhost:1313/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "http:\/\/localhost:1313\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "http://localhost:1313/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "http:\/\/localhost:1313\/post\/lxc_command\/",
+        "wordCount" : "377",
+        "genre" : [ 
+      
+      "Blog"
+
+    ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+
+
+  
+  
+  
+
+
+
+<style>
+  .welcome-text {
+      font-size: 2rem;
+      color: #878787;           
+      text-align: center;
+      margin: 20px 0;
+      font-weight: bold;
+       
+  }
+</style>
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      >
+<div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">I&#39;m Chenxi Dang</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>Call me Chenxi</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/Tech2Nova/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fa-brands fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:Dangchenxi650@163.com"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fa-solid fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://weixin.qq.com/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="WeChat"
+            title="WeChat"
+          >
+            <i class="fa-brands fa-weixin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.bilibili.com/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Bilibili"
+            title="Bilibili"
+          >
+            <i class="fa-brands fa-bilibili fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  
+  </div>
+
+  
+    <div class="welcome-text">
+    👋 花径不曾缘客扫，蓬门今始为君开。
+    </div>
+  <footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Chenxi Dang
+        2026
+      
+    </li>
+    
+      <li class="footer__item">
+        <a
+          class="link"
+          href="/imprint/"
+          
+          title=""
+        >
+          法律声明
+        </a>
+      </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.9531b4a2217a70c5a1fce89c1f81c9ebbdd586708fcd4130b417320c7230c8d6.js"
+    integrity="sha256-lTG0oiF6cMWh/OicH4HJ673VhnCPzUEwtBcyDHIwyNY="
+    crossorigin="anonymous"
+  ></script></div>
+
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >首页</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >文章</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/categories/"
+              
+              title=""
+              >专题</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >关于我</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/work/"
+              
+              title=""
+              >工作经历</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      
+        <h1>Linux LXC容器使用</h1>
+      
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  2026年01月20日
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text"></span>
+          </li>
+        </ul>
+      <p>在 Ubuntu 主机中使用 LXC 容器的各类情况</p>
+<h5 id="11-lxc介绍">1.1 LXC介绍</h5>
+<p>Proxmox VE (PVE) 提供了两种主要的虚拟化技术：完整的虚拟机(KVM)和轻量级的Linux容器(LXC)。</p>
+<p>LXC是Linux容器（Linux Containers）的缩写，是一种轻量级的虚拟化技术。</p>
+<p>LXC容器利用Linux内核的cgroup和namespace技术，在应用层创建隔离的运行环境，与宿主机共享同一个内核，但拥有独立的文件系统、网络和进程空间。与Docker等应用容器不同，LXC是<strong>系统容器</strong>，可以运行完整的操作系统，包括init系统、后台服务和各种系统工具。PVE中的LXC容器分为两种类型：</p>
+<ul>
+<li><strong>无特权容器(Unprivileged Containers)</strong>：默认选项，安全性较高</li>
+<li><strong>特权容器(Privileged Containers)</strong>：拥有更高权限，能直接访问宿主机资源</li>
+</ul>
+<h5 id="12-安装lxc">1.2 安装LXC</h5>
+<p>在大多数情况下，您会在您的 Linux 发行版中找到最新版本的 LXC。直接在发行版的软件包库中，或者通过一些移植通道。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install lxc
+</span></span></code></pre></div><p>您的系统将拥有所有 LXC 命令，以及所有模板，使用以下命令检查 Linux 内核是否具有必需的配置</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lxc-checkconfig
+</span></span></code></pre></div><p>所有可用的 LXC 模板都位于 /usr/local/share/lxc/templates 目录下。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># ls -1 /usr/local/share/lxc/templates</span>
+</span></span></code></pre></div><h5 id="13-创建并启动lxc容器在root权限下进行">1.3 创建并启动LXC容器（在root权限下进行）</h5>
+<p>特权容器是由 root 创建并作为 root 运行的容器。</p>
+<p>特权容器是开始学习和试验 LXC 的最简单方法，但它们可能不适合生产环境使用。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-create --name mycontainer --template download -- --dist ubuntu --release jammy --arch amd64
+</span></span></code></pre></div><p>说明：</p>
+<ul>
+<li>mycontainer替换为创建容器的名字</li>
+<li>Distribution: ubuntu</li>
+<li>Release: jammy 或 noble</li>
+<li>Architecture: amd64</li>
+</ul>
+<p>创建容器后，您可以启动它。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-start --name mycontainer
+</span></span></code></pre></div><p>您可以查看有关容器的状态信息。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-info --name mycontainer
+</span></span><span class="line"><span class="cl">Name:           mycontainer
+</span></span><span class="line"><span class="cl">State:          RUNNING
+</span></span><span class="line"><span class="cl">PID:            <span class="m">3250</span>
+</span></span><span class="line"><span class="cl">IP:             10.0.3.224
+</span></span><span class="line"><span class="cl">Link:           vethgmeH9z
+</span></span><span class="line"><span class="cl">TX bytes:      1.51 KiB
+</span></span><span class="line"><span class="cl">RX bytes:      2.15 KiB
+</span></span><span class="line"><span class="cl">Total bytes:   3.66 KiB
+</span></span></code></pre></div><p>您可以查看所有容器的状态信息。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-ls --fancy
+</span></span><span class="line"><span class="cl">NAME        STATE   AUTOSTART GROUPS IPV4       IPV6 UNPRIVILEGED 
+</span></span><span class="line"><span class="cl">mycontainer RUNNING <span class="m">0</span>         -      10.0.3.224 -    <span class="nb">false</span>
+</span></span></code></pre></div><p>LXC容器只提供命令行面板，lxc-attach命令启动容器 shell。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-attach --name mycontainer
+</span></span></code></pre></div><p>退出容器 shell。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@mycontainer:~# <span class="nb">exit</span>
+</span></span></code></pre></div><p>您可以停止容器。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-stop --name mycontainer
+</span></span></code></pre></div><p>如果您不再需要该容器，则可以永久销毁它。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-destroy --name mycontainer
+</span></span></code></pre></div><h5 id="14-lxc容器配置">1.4 LXC容器配置</h5>
+<p>容器的文件系统活动仅限于 <code>/var/lib/lxc/&lt;container-name&gt;/rootfs</code></p>
+<p>如果想实现在主机和容器之间共享某些文件，您可以创建容器外部的主机卷，然后将该卷挂载到容器内部。</p>
+<p>首先在host中创建一个共享文件夹（记得赋予权限，chmod +x）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# mkdir -p /home/mz/Desktop/lxc-share 
+</span></span></code></pre></div><p>然后编辑容器配置文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /var/lib/lxc/encrypt/config
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#在最后一行追加以下内容</span>
+</span></span><span class="line"><span class="cl">lxc.mount.entry <span class="o">=</span> /home/mz/Desktop/lxc-share share none bind,create<span class="o">=</span>dir <span class="m">0</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">！！！！！容器路径不要使用绝对路径，例如/share，直接使用share
+</span></span></code></pre></div><p>说明：</p>
+<ul>
+<li>lxc.mount.entry 是 LXC 的标准挂载语法</li>
+<li>create=dir：自动创建容器内的 /mnt/share 目录</li>
+<li>bind：绑定挂载</li>
+<li>0 0：dump 和 fsck 顺序</li>
+</ul>
+<p>配置容器后，重新启动它以使用新配置。</p>
+<h5 id="15-lxc容器快照">1.5 LXC容器快照</h5>
+<p>！！注意，拍摄快照时，容器一定要是停止状态</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lxc-snapshot mycontainer
+</span></span></code></pre></div><p>生成的快照存放在/var/lib/lxc/你的容器名/snaps/中，快照名称依次从snap0, snap1 &hellip; snapn</p>
+<p>查看当前存在的快照</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo lxc-snapshot -L -n 你的容器名          <span class="c1"># 列出所有快照</span>
+</span></span></code></pre></div><p>恢复快照</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 恢复并覆盖原容器</span>
+</span></span><span class="line"><span class="cl">sudo lxc-snapshot -r 快照名 -n 你的容器名
+</span></span></code></pre></div><p>删除快照</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo lxc-snapshot -d 快照名 -n 你的容器名
+</span></span></code></pre></div><h5 id="16-手动创建lxc容器快照">1.6 手动创建LXC容器快照</h5>
+<p>当无法使用lxc-create命令创建容器时，例如一直卡在下载image映像</p>
+<p>此时，我们可以手动下载</p>
+<p>通过官网或者镜像源下载rootfs.tar.xz和meta.tar.xz
+<a href="https://mirrors.tuna.tsinghua.edu.cn/lxc-images/images/ubuntu/jammy/amd64/default/20260111_07:42/rootfs.tar.xz">https://mirrors.tuna.tsinghua.edu.cn/lxc-images/images/ubuntu/jammy/amd64/default/20260111_07:42/rootfs.tar.xz</a>
+<a href="https://images.linuxcontainers.org/images/ubuntu/jammy/amd64/default/20260111_07:42/meta.tar.xz">https://images.linuxcontainers.org/images/ubuntu/jammy/amd64/default/20260111_07:42/meta.tar.xz</a></p>
+<p>然后将这两个文件放在/home/x/lxc-files/rootfs.tar.xz（或者指定目录下，在下方命令中对应替换即可）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo lxc-create -n lxc1 -t <span class="nb">local</span> -- --fstree /home/x/lxc-files/rootfs.tar.xz --metadata /home/x/lxc-files/meta.tar.xz
+</span></span></code></pre></div><p>然后就创建成功</p>
+<h5 id="17-手动删除容器">1.7 手动删除容器</h5>
+<p>在跑实验时，会遇到容器损坏，无法开机，例如</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">x@x-Latitude-7300:~$ sudo lxc-start lxc1
+</span></span><span class="line"><span class="cl">lxc-start: lxc1: lxccontainer.c: wait_on_daemonized_start: <span class="m">877</span> Received container state <span class="s2">&#34;ABORTING&#34;</span> instead of <span class="s2">&#34;RUNNING&#34;</span>
+</span></span><span class="line"><span class="cl">lxc-start: lxc1: tools/lxc_start.c: main: <span class="m">306</span> The container failed to start
+</span></span><span class="line"><span class="cl">lxc-start: lxc1: tools/lxc_start.c: main: <span class="m">309</span> To get more details, run the container in foreground mode
+</span></span><span class="line"><span class="cl">lxc-start: lxc1: tools/lxc_start.c: main: <span class="m">311</span> Additional information can be obtained by setting the --logfile and --logpriority options
+</span></span></code></pre></div><p>此时，我尝试用快照覆盖，或者直接复制快照，都无法还原容器，那只能重新创建容器，好在我们通过手动创建的速度很快</p>
+<p>但是创建新容器前，我们需要将原来的容器删除，发现手动无法删除lxc1文件夹，即使在root权限下</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@x-Latitude-7300:/var/lib/lxc# rm -r lxc1/
+</span></span><span class="line"><span class="cl">rm: cannot remove <span class="s1">&#39;lxc1/rootfs/etc/sudoers&#39;</span>: Operation not permitted
+</span></span><span class="line"><span class="cl">rm: cannot remove <span class="s1">&#39;lxc1/rootfs/etc/passwd&#39;</span>: Operation not permitted
+</span></span><span class="line"><span class="cl">rm: cannot remove <span class="s1">&#39;lxc1/rootfs/etc/shadow&#39;</span>: Operation not permitted
+</span></span><span class="line"><span class="cl">rm: cannot remove <span class="s1">&#39;lxc1/rootfs/usr/games/.ssh/authorized_keys&#39;</span>: Operation not permitted
+</span></span><span class="line"><span class="cl">rm: cannot remove <span class="s1">&#39;lxc1/rootfs/usr/games/.ssh/authorized_keys2&#39;</span>: Operation not permitted
+</span></span></code></pre></div><p>此时，通过查询了解到</p>
+<p>容器里某些关键文件（/etc/passwd、/etc/shadow、authorized_keys 等）可能被某些安全脚本、模板、或你/别人手动设置了 +a 来防止意外修改。</p>
+<p>LXC 模板有时会这么做，尤其是 privileged 容器或某些安全加固过的镜像。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@x-Latitude-7300:/var/lib/lxc# sudo lsattr -R /var/lib/lxc/lxc1/rootfs/etc/passwd 
+</span></span><span class="line"><span class="cl">-----a--------e------- /var/lib/lxc/lxc1/rootfs/etc/passwd
+</span></span></code></pre></div><p>所以，我们先移除 append-only 属性（必须递归全去掉）：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chattr -R -a /var/lib/lxc/lxc1/rootfs
+</span></span></code></pre></div><p>再次查询，a属性成功去除</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@x-Latitude-7300:/var/lib/lxc# sudo lsattr -R /var/lib/lxc/lxc1/rootfs/etc/passwd
+</span></span><span class="line"><span class="cl">--------------e------- /var/lib/lxc/lxc1/rootfs/etc/passwd
+</span></span></code></pre></div><p>此时，我们再删除lxc容器文件夹，成功删除</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo rm -rf /var/lib/lxc/lxc1
+</span></span></code></pre></div>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/blog/">Blog</a></span>
+
+
+      
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Chenxi Dang
+        2026
+      
+    </li>
+    
+      <li class="footer__item">
+        <a
+          class="link"
+          href="/imprint/"
+          
+          title=""
+        >
+          法律声明
+        </a>
+      </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.9531b4a2217a70c5a1fce89c1f81c9ebbdd586708fcd4130b417320c7230c8d6.js"
+    integrity="sha256-lTG0oiF6cMWh/OicH4HJ673VhnCPzUEwtBcyDHIwyNY="
+    crossorigin="anonymous"
+  ></script>
+  <script async defer src=" https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" /></noscript>
+
+</body>
+</html>

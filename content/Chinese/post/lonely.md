@@ -4,7 +4,7 @@ title = "把期待留给2026！"
 date = "2026-01-01"
 description = ""
 categories = ["思考"]
-thumbnail= "images/alone.jpg"
+thumbnail= "images/sea3.jpg"
 +++
 不如意事常八九，可与语人无二三
 

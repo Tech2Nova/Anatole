@@ -21,11 +21,33 @@
     <item>
       <title>健身记录</title>
       <link>http://localhost:1313/post/train/</link>
-      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/post/train/</guid>
       
+        <description>&lt;p&gt;持续更新&amp;hellip;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>icassp被拒</title>
+      <link>http://localhost:1313/post/icassp_reject/</link>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/icassp_reject/</guid>
+      
         <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Linux LXC容器使用</title>
+      <link>http://localhost:1313/post/lxc_command/</link>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/lxc_command/</guid>
+      
+        <description>&lt;p&gt;在 Ubuntu 主机中使用 LXC 容器的各类情况&lt;/p&gt;</description>
       
     </item>
     

@@ -30,6 +30,28 @@
     </item>
     
     <item>
+      <title>icassp被拒</title>
+      <link>http://localhost:1313/post/icassp_reject/</link>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/icassp_reject/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Linux LXC容器使用</title>
+      <link>http://localhost:1313/post/setup-lxc/</link>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/setup-lxc/</guid>
+      
+        <description>在 Ubuntu 主机中使用 LXC 容器</description>
+      
+    </item>
+    
+    <item>
       <title>把期待留给2026！</title>
       <link>http://localhost:1313/post/lonely/</link>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
