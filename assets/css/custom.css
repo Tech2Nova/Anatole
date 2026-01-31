@@ -55,3 +55,11 @@
   tab-size: 2;
 }
 
+body {
+    font-family:
+        "KaiTi",
+        "Kaiti SC",
+        "STKaiti",
+        "AR PL UKai CN",
+        serif;
+}
