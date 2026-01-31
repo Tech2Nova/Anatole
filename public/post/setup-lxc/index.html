@@ -212,7 +212,7 @@
 
     ,
         "url" : "http:\/\/localhost:1313\/post\/setup-lxc\/",
-        "wordCount" : "239",
+        "wordCount" : "571",
         "genre" : [ 
       
       "Blog"
@@ -522,90 +522,181 @@
           </li>
         </ul>
       <p>在 Ubuntu 主机中创建 LXC 容器</p>
-<h4 id="一熟悉lxc容器的使用方式利用lxc容器运行程序并收集hpcs数据">一、熟悉LXC容器的使用方式，利用LXC容器运行程序并收集HPCs数据</h4>
-<h5 id="11-lxc介绍">1.1 LXC介绍</h5>
-<p>Proxmox VE (PVE) 提供了两种主要的虚拟化技术：完整的虚拟机(KVM)和轻量级的Linux容器(LXC)。</p>
-<p>LXC是Linux容器（Linux Containers）的缩写，是一种轻量级的虚拟化技术。</p>
-<p>LXC容器利用Linux内核的cgroup和namespace技术，在应用层创建隔离的运行环境，与宿主机共享同一个内核，但拥有独立的文件系统、网络和进程空间。与Docker等应用容器不同，LXC是<strong>系统容器</strong>，可以运行完整的操作系统，包括init系统、后台服务和各种系统工具。PVE中的LXC容器分为两种类型：</p>
-<ul>
-<li><strong>无特权容器(Unprivileged Containers)</strong>：默认选项，安全性较高</li>
-<li><strong>特权容器(Privileged Containers)</strong>：拥有更高权限，能直接访问宿主机资源</li>
-</ul>
-<h5 id="12-安装lxc">1.2 安装LXC</h5>
-<p>在大多数情况下，您会在您的 Linux 发行版中找到最新版本的 LXC。直接在发行版的软件包库中，或者通过一些移植通道。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install lxc
-</span></span></code></pre></div><p>您的系统将拥有所有 LXC 命令，以及所有模板，使用以下命令检查 Linux 内核是否具有必需的配置</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lxc-checkconfig
-</span></span></code></pre></div><p>所有可用的 LXC 模板都位于 /usr/local/share/lxc/templates 目录下。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># ls -1 /usr/local/share/lxc/templates</span>
-</span></span></code></pre></div><h5 id="13-创建并启动lxc容器在root权限下进行">1.3 创建并启动LXC容器（在root权限下进行）</h5>
-<p>特权容器是由 root 创建并作为 root 运行的容器。</p>
-<p>特权容器是开始学习和试验 LXC 的最简单方法，但它们可能不适合生产环境使用。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-create --name mycontainer --template download -- --dist ubuntu --release jammy --arch amd64
-</span></span></code></pre></div><p>说明：</p>
-<ul>
-<li>mycontainer替换为创建容器的名字</li>
-<li>Distribution: ubuntu</li>
-<li>Release: jammy 或 noble</li>
-<li>Architecture: amd64</li>
-</ul>
-<p>创建容器后，您可以启动它。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-start --name mycontainer
-</span></span></code></pre></div><p>您可以查看有关容器的状态信息。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-info --name mycontainer
-</span></span><span class="line"><span class="cl">Name:           mycontainer
-</span></span><span class="line"><span class="cl">State:          RUNNING
-</span></span><span class="line"><span class="cl">PID:            <span class="m">3250</span>
-</span></span><span class="line"><span class="cl">IP:             10.0.3.224
-</span></span><span class="line"><span class="cl">Link:           vethgmeH9z
-</span></span><span class="line"><span class="cl">TX bytes:      1.51 KiB
-</span></span><span class="line"><span class="cl">RX bytes:      2.15 KiB
-</span></span><span class="line"><span class="cl">Total bytes:   3.66 KiB
-</span></span></code></pre></div><p>您可以查看所有容器的状态信息。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-ls --fancy
-</span></span><span class="line"><span class="cl">NAME        STATE   AUTOSTART GROUPS IPV4       IPV6 UNPRIVILEGED 
-</span></span><span class="line"><span class="cl">mycontainer RUNNING <span class="m">0</span>         -      10.0.3.224 -    <span class="nb">false</span>
-</span></span></code></pre></div><p>LXC容器只提供命令行面板，lxc-attach命令启动容器 shell。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-attach --name mycontainer
-</span></span></code></pre></div><p>退出容器 shell。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@mycontainer:~# <span class="nb">exit</span>
-</span></span></code></pre></div><p>您可以停止容器。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-stop --name mycontainer
-</span></span></code></pre></div><p>如果您不再需要该容器，则可以永久销毁它。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# lxc-destroy --name mycontainer
-</span></span></code></pre></div><h5 id="14-lxc容器配置">1.4 LXC容器配置</h5>
-<p>容器的文件系统活动仅限于 <code>/var/lib/lxc/&lt;container-name&gt;/rootfs</code></p>
-<p>如果想实现在主机和容器之间共享某些文件，您可以创建容器外部的主机卷，然后将该卷挂载到容器内部。</p>
-<p>首先在host中创建一个共享文件夹（记得赋予权限，chmod +x）</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">root@host:~# mkdir -p /home/mz/Desktop/lxc-share 
-</span></span></code></pre></div><p>然后编辑容器配置文件</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /var/lib/lxc/encrypt/config
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#!/bin/bash</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># run_lxc_all_samples_fixed.sh</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 用途：在 LXC 容器 ubuntu22 中依次运行 /home/1 目录下所有样本</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 修复重点：避免 perf 后台+kill 导致内核 hung / deadlock</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#           加强容器彻底停止逻辑，防止残留进程累积</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 支持：--start N 或 -s N 从第 N 个样本继续</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#在最后一行追加以下内容</span>
-</span></span><span class="line"><span class="cl">lxc.mount.entry <span class="o">=</span> /home/mz/Desktop/lxc-share /var/lib/lxc/mycontainer/rootfs/mnt/share none bind,create<span class="o">=</span>dir <span class="m">0</span> <span class="m">0</span>
-</span></span></code></pre></div><p>说明：</p>
-<ul>
-<li>lxc.mount.entry 是 LXC 的标准挂载语法</li>
-<li>create=dir：自动创建容器内的 /mnt/share 目录</li>
-<li>bind：绑定挂载</li>
-<li>0 0：dump 和 fsck 顺序</li>
-</ul>
-<p>配置容器后，重新启动它以使用新配置。</p>
-<h5 id="15-lxc容器快照">1.5 LXC容器快照</h5>
-<p>！！注意，拍摄快照时，容器一定要是停止状态</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lxc-snapshot mycontainer
-</span></span></code></pre></div><p>生成的快照存放在/var/lib/lxc/你的容器名/snaps/中，快照名称依次从snap0, snap1 &hellip; snapn</p>
-<p>查看当前存在的快照</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo lxc-snapshot -L -n 你的容器名          <span class="c1"># 列出所有快照</span>
-</span></span></code></pre></div><p>恢复快照</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 恢复并覆盖原容器</span>
-</span></span><span class="line"><span class="cl">sudo lxc-snapshot -r 快照名 -n 你的容器名
-</span></span></code></pre></div><p>删除快照</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo lxc-snapshot -d 快照名 -n 你的容器名
-</span></span></code></pre></div><p>参考文档：</p>
-<p><a href="https://linuxcontainers.cn/lxc/getting-started/">Linux 容器 - LXC - 入门 - Linux 容器</a></p>
-<p><a href="https://www.runoob.com/linux/linux-comm-lxc.html">Linux lxc 命令 | 菜鸟教程</a></p>
-<p><a href="https://bbs.huaweicloud.com/blogs/379777">使用 LXC 命令创建和启动 LXC Linux 容器-云社区-华为云</a></p>
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> -u
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> -e
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">CONTAINER</span><span class="o">=</span><span class="s2">&#34;lxc1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">SNAPSHOT</span><span class="o">=</span><span class="s2">&#34;snap0&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">CGROUP</span><span class="o">=</span><span class="s2">&#34;/lxc.payload.lxc1&#34;</span>           <span class="c1"># 请确认这个路径在你的系统上正确（cgroup v1/v2 可能不同）</span>
+</span></span><span class="line"><span class="cl"><span class="nv">CONTAINER_SAMPLES_DIR</span><span class="o">=</span><span class="s2">&#34;/home/1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">OUTPUT_DIR</span><span class="o">=</span><span class="s2">&#34;./results4&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">LOG_FILE</span><span class="o">=</span><span class="s2">&#34;./run_lxc_log4.txt&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mkdir -p <span class="s2">&#34;</span><span class="nv">$OUTPUT_DIR</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">chmod <span class="m">755</span> <span class="s2">&#34;</span><span class="nv">$OUTPUT_DIR</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">chown -R <span class="s2">&#34;</span><span class="k">$(</span>whoami<span class="k">)</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$OUTPUT_DIR</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">exec</span> 1&gt;&gt;<span class="s2">&#34;</span><span class="nv">$LOG_FILE</span><span class="s2">&#34;</span> 2&gt;<span class="p">&amp;</span><span class="m">1</span>   <span class="c1"># 把所有输出同时记录到日志文件，便于排查</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;脚本启动于 </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;当前内核: </span><span class="k">$(</span>uname -r<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;perf 版本: </span><span class="k">$(</span>perf version 2&gt;/dev/null <span class="o">||</span> <span class="nb">echo</span> <span class="s1">&#39;perf 未找到&#39;</span><span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># =============== 参数解析 ===============</span>
+</span></span><span class="line"><span class="cl"><span class="nv">START_INDEX</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="o">[[</span> <span class="nv">$#</span> -gt <span class="m">0</span> <span class="o">]]</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="nv">$1</span> in
+</span></span><span class="line"><span class="cl">        --start<span class="p">|</span>-s<span class="o">)</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">START_INDEX</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$2</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> ! <span class="o">[[</span> <span class="s2">&#34;</span><span class="nv">$START_INDEX</span><span class="s2">&#34;</span> <span class="o">=</span>~ ^<span class="o">[</span>0-9<span class="o">]</span>+$ <span class="o">]]</span> <span class="o">||</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$START_INDEX</span><span class="s2">&#34;</span> -lt <span class="m">1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">echo</span> <span class="s2">&#34;错误：--start 参数必须是正整数 ≥1&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">            <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">shift</span> <span class="m">2</span>
+</span></span><span class="line"><span class="cl">            <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">        *<span class="o">)</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">echo</span> <span class="s2">&#34;未知参数: </span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">echo</span> <span class="s2">&#34;用法: </span><span class="nv">$0</span><span class="s2"> [--start N | -s N]&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">            <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">esac</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;运行模式：从第 </span><span class="nv">$START_INDEX</span><span class="s2"> 个样本开始&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># =============== 单次实验函数（核心修改在此） ===============</span>
+</span></span><span class="line"><span class="cl">run_experiment<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">local</span> <span class="nv">sample_index</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">local</span> <span class="nv">sample_filename</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$2</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">local</span> <span class="nv">output_file</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$OUTPUT_DIR</span><span class="s2">/</span><span class="k">$(</span><span class="nb">printf</span> <span class="s2">&#34;%04d&#34;</span> <span class="nv">$sample_index</span><span class="k">)</span><span class="s2">.csv&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[</span> -f <span class="s2">&#34;</span><span class="nv">$output_file</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;跳过：第 </span><span class="nv">$sample_index</span><span class="s2"> (</span><span class="nv">$sample_filename</span><span class="s2">) → 已存在 </span><span class="nv">$output_file</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;================================================================&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;开始 第 </span><span class="nv">$sample_index</span><span class="s2">  → </span><span class="nv">$sample_filename</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;输出 → </span><span class="nv">$output_file</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;================================================================&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 1. 恢复快照</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;恢复快照 </span><span class="nv">$SNAPSHOT</span><span class="s2"> ...&#34;</span>
+</span></span><span class="line"><span class="cl">    sudo lxc-snapshot -n <span class="s2">&#34;</span><span class="nv">$CONTAINER</span><span class="s2">&#34;</span> -r <span class="s2">&#34;</span><span class="nv">$SNAPSHOT</span><span class="s2">&#34;</span> <span class="o">||</span> <span class="o">{</span> <span class="nb">echo</span> <span class="s2">&#34;快照恢复失败&#34;</span><span class="p">;</span> <span class="k">return</span> 1<span class="p">;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    sleep <span class="m">6</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 2. 启动容器（前台 &amp; 捕获 PID）</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;启动容器...&#34;</span>
+</span></span><span class="line"><span class="cl">    sudo lxc-start -n <span class="s2">&#34;</span><span class="nv">$CONTAINER</span><span class="s2">&#34;</span> -F <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">LXC_PID</span><span class="o">=</span><span class="nv">$!</span>
+</span></span><span class="line"><span class="cl">    sleep <span class="m">4</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 3. 运行程序 + perf 前台采集（最关键修改：perf 不后台、不被 kill）</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;启动 perf + 样本程序...&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    sudo perf stat -x <span class="s1">&#39;,&#39;</span> -I <span class="m">100</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>        -e dTLB-load-misses,dTLB-store-misses,iTLB-load-misses,bus-cycles <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>        --cgroup<span class="o">=</span><span class="s2">&#34;</span><span class="nv">$CGROUP</span><span class="s2">&#34;</span> -a <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>        -- bash -c <span class="s2">&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">            set -e
+</span></span></span><span class="line"><span class="cl"><span class="s2">            timeout 7.5 \
+</span></span></span><span class="line"><span class="cl"><span class="s2">            bash -c &#39;
+</span></span></span><span class="line"><span class="cl"><span class="s2">                sudo lxc-attach -n \&#34;</span><span class="nv">$CONTAINER</span><span class="s2">\&#34; --nice 19 -- \&#34;</span><span class="nv">$CONTAINER_SAMPLES_DIR</span><span class="s2">/</span><span class="nv">$sample_filename</span><span class="s2">\&#34; &amp;
+</span></span></span><span class="line"><span class="cl"><span class="s2">                PROG_PID=\$!
+</span></span></span><span class="line"><span class="cl"><span class="s2">                sleep 7.2
+</span></span></span><span class="line"><span class="cl"><span class="s2">                pkill -9 -u user 2&gt;/dev/null || true
+</span></span></span><span class="line"><span class="cl"><span class="s2">                killall -9 -u user 2&gt;/dev/null || true
+</span></span></span><span class="line"><span class="cl"><span class="s2">                wait \$PROG_PID 2&gt;/dev/null || true
+</span></span></span><span class="line"><span class="cl"><span class="s2">            &#39;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;</span> &gt; <span class="s2">&#34;</span><span class="nv">$output_file</span><span class="s2">&#34;</span> 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">PERF_EXIT</span><span class="o">=</span><span class="nv">$?</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;perf 退出码: </span><span class="nv">$PERF_EXIT</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 4. 强制清理容器（多重保险）</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;强制停止容器...&#34;</span>
+</span></span><span class="line"><span class="cl">    sudo lxc-stop -n <span class="s2">&#34;</span><span class="nv">$CONTAINER</span><span class="s2">&#34;</span> -k <span class="o">||</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">    sleep 1.5
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 等待状态变为 STOPPED，最多等 10 秒</span>
+</span></span><span class="line"><span class="cl">    sudo lxc-wait -n <span class="s2">&#34;</span><span class="nv">$CONTAINER</span><span class="s2">&#34;</span> -s STOPPED -t <span class="m">10</span> <span class="o">||</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 再暴力杀一次残留（针对 lxc monitor 或其他残魂）</span>
+</span></span><span class="line"><span class="cl">    sudo pkill -9 -f <span class="s2">&#34;lxc.*</span><span class="nv">$CONTAINER</span><span class="s2">&#34;</span> 2&gt;/dev/null <span class="o">||</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">    sudo killall -9 -q -u <span class="s2">&#34;</span><span class="k">$(</span>sudo lxc-info -n <span class="s2">&#34;</span><span class="nv">$CONTAINER</span><span class="s2">&#34;</span> -pH 2&gt;/dev/null<span class="k">)</span><span class="s2">&#34;</span> 2&gt;/dev/null <span class="o">||</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># 等待 lxc-start 进程结束</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">wait</span> <span class="nv">$LXC_PID</span> 2&gt;/dev/null <span class="o">||</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;✓ 第 </span><span class="nv">$sample_index</span><span class="s2"> 完成，结果: </span><span class="nv">$output_file</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span>
+</span></span><span class="line"><span class="cl">    sleep <span class="m">2</span>   <span class="c1"># 每轮之间多留一点喘息时间，减轻存储/内核压力</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># =============== 获取样本列表 ===============</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;获取样本列表（基于快照 </span><span class="nv">$SNAPSHOT</span><span class="s2">）...&#34;</span>
+</span></span><span class="line"><span class="cl">sudo lxc-snapshot -n <span class="s2">&#34;</span><span class="nv">$CONTAINER</span><span class="s2">&#34;</span> -r <span class="s2">&#34;</span><span class="nv">$SNAPSHOT</span><span class="s2">&#34;</span> &gt;/dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="o">||</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">sudo lxc-start -n <span class="s2">&#34;</span><span class="nv">$CONTAINER</span><span class="s2">&#34;</span> -d
+</span></span><span class="line"><span class="cl">sleep <span class="m">4</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mapfile -t sample_files &lt; &lt;<span class="o">(</span>
+</span></span><span class="line"><span class="cl">    sudo lxc-attach -n <span class="s2">&#34;</span><span class="nv">$CONTAINER</span><span class="s2">&#34;</span> -- ls -1 <span class="s2">&#34;</span><span class="nv">$CONTAINER_SAMPLES_DIR</span><span class="s2">&#34;</span> 2&gt;/dev/null <span class="p">|</span>
+</span></span><span class="line"><span class="cl">    grep -v <span class="s1">&#39;^$&#39;</span> <span class="p">|</span> sort -V
+</span></span><span class="line"><span class="cl"><span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo lxc-stop -n <span class="s2">&#34;</span><span class="nv">$CONTAINER</span><span class="s2">&#34;</span> -k &gt;/dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="o">||</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">sleep <span class="m">2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">total_samples</span><span class="o">=</span><span class="si">${#</span><span class="nv">sample_files</span><span class="p">[@]</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;发现 </span><span class="nv">$total_samples</span><span class="s2"> 个样本&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="nv">$total_samples</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;错误：没有样本文件！&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="nv">$START_INDEX</span> -gt <span class="nv">$total_samples</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;错误：START_INDEX=</span><span class="nv">$START_INDEX</span><span class="s2"> &gt; 总样本 </span><span class="nv">$total_samples</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;前5个样本预览：&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">printf</span> <span class="s2">&#34;  %s\n&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">sample_files</span><span class="p">[@]:</span><span class="nv">0</span><span class="p">:</span><span class="nv">5</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span> <span class="nv">$total_samples</span> -gt <span class="m">5</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&#34;  ...&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># =============== 主循环 ===============</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;开始批量运行（从第 </span><span class="nv">$START_INDEX</span><span class="s2"> 个）...&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="o">((</span><span class="nv">i</span> <span class="o">=</span> START_INDEX - 1<span class="p">;</span> i &lt; total_samples<span class="p">;</span> i++<span class="o">))</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">index</span><span class="o">=</span><span class="k">$((</span>i <span class="o">+</span> <span class="m">1</span><span class="k">))</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">filename</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">sample_files</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    run_experiment <span class="s2">&#34;</span><span class="nv">$index</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$filename</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># =============== 总结 ===============</span>
+</span></span><span class="line"><span class="cl"><span class="nv">completed_count</span><span class="o">=</span><span class="k">$(</span>ls -1 <span class="s2">&#34;</span><span class="nv">$OUTPUT_DIR</span><span class="s2">&#34;</span>/*.csv 2&gt;/dev/null <span class="p">|</span> wc -l<span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;======================================================================&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;本次运行结束 </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;总样本数     : </span><span class="nv">$total_samples</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;起始位置     : 第 </span><span class="nv">$START_INDEX</span><span class="s2"> 个&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;已生成结果   : </span><span class="nv">$completed_count</span><span class="s2"> 个&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;结果目录     : </span><span class="nv">$OUTPUT_DIR</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;最近10个结果文件：&#34;</span>
+</span></span><span class="line"><span class="cl">ls -1 <span class="s2">&#34;</span><span class="nv">$OUTPUT_DIR</span><span class="s2">&#34;</span>/*.csv 2&gt;/dev/null <span class="p">|</span> sort -V <span class="p">|</span> tail -10 <span class="o">||</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;======================================================================&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;日志文件：</span><span class="nv">$LOG_FILE</span><span class="s2">&#34;</span>
+</span></span></code></pre></div>
 </div>
     <div class="post__footer">
       

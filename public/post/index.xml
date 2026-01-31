@@ -6,7 +6,7 @@
     <description>Recent content in Posts on 我的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 23 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>😋 没错！点击这里！</title>
       <link>http://localhost:1313/post/click_here/</link>
@@ -21,11 +21,22 @@
     <item>
       <title>健身记录</title>
       <link>http://localhost:1313/post/train/</link>
-      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/post/train/</guid>
       
-        <description></description>
+        <description>&lt;p&gt;持续更新&amp;hellip;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>LXC运行脚本</title>
+      <link>http://localhost:1313/post/setup_lxc/</link>
+      <pubDate>Sat, 31 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/setup_lxc/</guid>
+      
+        <description>&lt;p&gt;在 Ubuntu 主机中利用 LXC 容器采集HPC数据&lt;/p&gt;</description>
       
     </item>
     
@@ -42,12 +53,12 @@
     
     <item>
       <title>Linux LXC容器使用</title>
-      <link>http://localhost:1313/post/setup-lxc/</link>
+      <link>http://localhost:1313/post/lxc_command/</link>
       <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/setup-lxc/</guid>
+      <guid>http://localhost:1313/post/lxc_command/</guid>
       
-        <description>在 Ubuntu 主机中使用 LXC 容器</description>
+        <description>&lt;p&gt;在 Ubuntu 主机中使用 LXC 容器的各类情况&lt;/p&gt;</description>
       
     </item>
     
@@ -151,17 +162,6 @@
     </item>
     
     <item>
-      <title>Setup LXC</title>
-      <link>http://localhost:1313/post/setup-lxc/</link>
-      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/post/setup-lxc/</guid>
-      
-        <description>在 Ubuntu 主机中创建 LXC 容器</description>
-      
-    </item>
-    
-    <item>
       <title>与武老师再聚</title>
       <link>http://localhost:1313/post/wujunjie/</link>
       <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
@@ -189,6 +189,17 @@
       <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/post/neimeng1/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>雍和宫、什刹海、中南海、北化</title>
+      <link>http://localhost:1313/post/beijing1/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/beijing1/</guid>
       
         <description></description>
       

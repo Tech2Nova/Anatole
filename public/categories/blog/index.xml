@@ -9,12 +9,12 @@
     <lastBuildDate>Tue, 20 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux LXC容器使用</title>
-      <link>http://localhost:1313/post/setup-lxc/</link>
+      <link>http://localhost:1313/post/lxc_command/</link>
       <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/setup-lxc/</guid>
+      <guid>http://localhost:1313/post/lxc_command/</guid>
       
-        <description>在 Ubuntu 主机中使用 LXC 容器</description>
+        <description>&lt;p&gt;在 Ubuntu 主机中使用 LXC 容器的各类情况&lt;/p&gt;</description>
       
     </item>
     

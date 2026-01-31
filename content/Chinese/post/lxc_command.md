@@ -254,5 +254,12 @@ sudo rm -rf /var/lib/lxc/lxc1
 ```
 
 
+参考文档：
+
+[Linux 容器 - LXC - 入门 - Linux 容器](https://linuxcontainers.cn/lxc/getting-started/)
+
+[Linux lxc 命令 | 菜鸟教程](https://www.runoob.com/linux/linux-comm-lxc.html)
+
+[使用 LXC 命令创建和启动 LXC Linux 容器-云社区-华为云](https://bbs.huaweicloud.com/blogs/379777)
 
 
