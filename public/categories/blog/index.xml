@@ -6,7 +6,18 @@
     <description>Recent content in Blog on 我的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 20 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LXC运行脚本</title>
+      <link>http://localhost:1313/post/setup_lxc/</link>
+      <pubDate>Sat, 31 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/setup_lxc/</guid>
+      
+        <description>&lt;p&gt;在 Ubuntu 主机中利用 LXC 容器采集HPC数据&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>Linux LXC容器使用</title>
       <link>http://localhost:1313/post/lxc_command/</link>
@@ -48,17 +59,6 @@
       <guid>http://localhost:1313/post/collect_hpc_in_lxc/</guid>
       
         <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Setup LXC</title>
-      <link>http://localhost:1313/post/setup-lxc/</link>
-      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/post/setup-lxc/</guid>
-      
-        <description>在 Ubuntu 主机中创建 LXC 容器</description>
       
     </item>
     

@@ -1,10 +1,10 @@
 +++
 author = "chenxi"
-title = "雍和宫、什刹海、长安街、北化"
-date = "2025-10-07"
+title = "北理、北邮、故宫"
+date = "2026-01-24"
 description = ""
 categories = ["旅行"]
-thumbnail= "images/yonghegong/yonghegong5.jpeg"
+thumbnail= "images/gugong/gugong11.heic"
 +++
 
 

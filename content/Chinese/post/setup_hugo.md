@@ -74,3 +74,54 @@ scoop bucket add <bucketname>
 [25+ Best, Most Popular Hugo Themes for 2024 | Hugo Blox](https://hugoblox.com/templates/)
 
 ### 3、在本地修改hugoblox内容
+
+
+### 4、hugo仓库缓存过多
+
+当使用了一段时间，由于多次构建hugo，会导致本地仓库占用内存过大，导致vercel更新慢，主要来源于/public文件夹和隐藏文件夹.git/
+
+针对/public文件夹，很简单，直接删除即可，不会有任何影响
+
+针对.git文件夹
+
+
+Step 1：备份源码（保险）
+复制整个 anatole 文件夹（不含 .git）
+
+Step 2：删除旧 Git 历史
+rm -rf .git
+
+
+⚠️ 注意：
+
+你删的是 版本历史
+
+不是源码
+
+Hugo / Vercel / 博客内容都不受影响
+
+Step 3：重新初始化 Git
+git init
+git add .
+git commit -m "initial clean commit"
+
+Step 4：关联 GitHub 远程仓库
+
+如果是原仓库（需要 force）：
+
+git branch -M main
+git remote add origin https://github.com/你的用户名/你的仓库.git
+git push -f origin main
+
+
+或者（更推荐）：
+
+在 GitHub 新建一个仓库，再推上去
+
+📉 效果：
+
+.git：800MB → 20~50MB
+
+Vercel 构建速度明显变快
+
+心理负担清零 😄

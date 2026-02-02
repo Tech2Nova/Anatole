@@ -4,7 +4,7 @@ title = "与武老师再聚"
 date = "2025-09-02"
 description = ""
 categories = ["动态"]
-thumbnail= "images/english.jpg"
+thumbnail= "images/wujunjie/1.jpeg"
 +++
 
 
