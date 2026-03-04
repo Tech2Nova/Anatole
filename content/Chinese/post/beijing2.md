@@ -9,34 +9,38 @@ thumbnail= "images/gugong/gugong11.heic"
 
 
 <!--more-->
-国庆假期最后两天，去北京小转了两天，主要是两个目的，一个是去雍和宫，为父亲和论文祈福，另一个是找王远和弟弟
+期末考试告一段落，论文结果也出了，于是计划周末到北京找同学玩，第一天见了佳俊和君哲
 
-**雍和宫**
-
-
-<img src="/images/yonghegong/yonghegong1.jpeg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/yonghegong/yonghegong2.jpeg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/yonghegong/yonghegong3.jpeg" style="width:75%; display:block; margin:auto;">
+**北理、北邮**
 
 
+<img src="/images/gugong/beiyou1.jpeg" style="width:50%; display:block; margin:auto;">
+<br>
+<img src="/images/gugong/beiyou2.jpeg" style="width:75%; display:block; margin:auto;">
+<br>
+<img src="/images/gugong/beiyou3.jpeg" style="width:50%; display:block; margin:auto;">
+<br>
+<img src="/images/gugong/beili1.jpeg" style="width:75%; display:block; margin:auto;">
+<br>
+<img src="/images/gugong/beili2.jpeg" style="width:75%; display:block; margin:auto;">
+<br>
+中午在北理旁边吃了老北京铜锅涮肉，晚上在北邮旁边吃了金谷园，这是一家饺子店，据说冬至那天排号排了3000多号，我们那天去也是等了快一个小时才有座位，他们家招牌是鲅鱼饺子，很不错。
 
 <br>
 
-**中国传媒大学**
+**故宫**
 
-上午和王远转了雍和宫，下午去了中传，和王远打了一场羽毛球，然后参观了学校，之后夜骑中南海和长安街😉
+第二天和王远一起去故宫，本来我就是打算来看故宫的，我们周三晚上就定了票，周四在小红书上刷到周末北京会下雪，故宫预约已经是一票难求了，幸亏我们提前订了，运气不错
 <br>
-<img src="/images/yonghegong/zhongchuan3.jpeg" style="width:75%; display:block; margin:auto;">
+<img src="/images/gugong/gugong3.jpeg" style="width:75%; display:block; margin:auto;">
 <br>
-<img src="/images/yonghegong/zhongchuan2.jpeg" style="width:75%; display:block; margin:auto;">
+<img src="/images/gugong/gugong2.jpeg" style="width:75%; display:block; margin:auto;">
 <br>
-<img src="/images/yonghegong/zhongchuan1.jpeg" style="width:75%; display:block; margin:auto;">
+<img src="/images/gugong/gugong1.jpeg" style="width:75%; display:block; margin:auto;">
 <br>
-<img src="/images/yonghegong/shishahai2.jpeg" style="width:75%; display:block; margin:auto;">
+<img src="/images/gugong/gugong4.jpeg" style="width:75%; display:block; margin:auto;">
 <br>
-<img src="/images/yonghegong/shishahai1.jpeg" style="width:75%; display:block; margin:auto;">
+<img src="/images/gugong/gugong5.jpeg" style="width:75%; display:block; margin:auto;">
 <br>
 
 
@@ -46,16 +50,29 @@ thumbnail= "images/gugong/gugong11.heic"
 
 第二天一大早，坐地铁去北京化工大学的昌平校区，前一天晚上我住在了中传的附近，中传属于北京的东边，而昌平在北京的西北边，足足坐了三个小时才到，见到了弟弟
 
-<img src="/images/yonghegong/beihua1.jpeg" style="width:75%; display:block; margin:auto;">
+<img src="/images/gugong/gugong6.jpeg" style="width:75%; display:block; margin:auto;">
 <br>
-<img src="/images/yonghegong/beihua2.jpeg" style="width:75%; display:block; margin:auto;">
-<br>
-
-<img src="/images/yonghegong/beihua3.jpeg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/yonghegong/beihua4.jpeg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/yonghegong/beihua5.jpeg" style="width:75%; display:block; margin:auto;">
+<img src="/images/gugong/gugong7.jpeg" style="width:75%; display:block; margin:auto;">
 <br>
 
-中午还和王文蕴一起吃了个饭，下午回了天津，这两天真是特种兵了，两天见了三个人
+<img src="/images/gugong/gugong8.jpeg" style="width:75%; display:block; margin:auto;">
+<br>
+<img src="/images/gugong/gugong9.jpeg" style="width:75%; display:block; margin:auto;">
+<br>
+<img src="/images/gugong/gugong10.jpeg" style="width:50%; display:block; margin:auto;">
+<br>
+
+<img src="/images/gugong/gugong11.heic" style="width:75%; display:block; margin:auto;">
+<br>
+<img src="/images/gugong/gugong12.heic" style="width:75%; display:block; margin:auto;">
+<br>
+<img src="/images/gugong/gugong13.jpeg" style="width:75%; display:block; margin:auto;">
+<br>
+
+上面故宫的全景图是在景山公园拍了，为了一个合适的拍照位置，大家挤破了头
+
+<br>
+<img src="/images/gugong/419.jpeg" style="width:75%; display:block; margin:auto;">
+<br>
+
+转完故宫，在附近的四季民福炫了一顿，两人点了半只烤鸭，3个菜，花了419，早知道这么贵就不吃这家了😭😭😭

@@ -19,6 +19,17 @@
     </item>
     
     <item>
+      <title>旅行</title>
+      <link>http://localhost:1313/categories/%E6%97%85%E8%A1%8C/</link>
+      <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/%E6%97%85%E8%A1%8C/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
       <title>动态</title>
       <link>http://localhost:1313/categories/%E5%8A%A8%E6%80%81/</link>
       <pubDate>Fri, 23 Jan 2026 00:00:00 +0000</pubDate>
@@ -35,17 +46,6 @@
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/categories/%E6%80%9D%E8%80%83/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>旅行</title>
-      <link>http://localhost:1313/categories/%E6%97%85%E8%A1%8C/</link>
-      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/categories/%E6%97%85%E8%A1%8C/</guid>
       
         <description></description>
       

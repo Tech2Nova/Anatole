@@ -41,6 +41,17 @@
     </item>
     
     <item>
+      <title>北理、北邮、故宫</title>
+      <link>http://localhost:1313/post/beijing2/</link>
+      <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/beijing2/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
       <title>icassp被拒</title>
       <link>http://localhost:1313/post/icassp_reject/</link>
       <pubDate>Fri, 23 Jan 2026 00:00:00 +0000</pubDate>
@@ -167,17 +178,6 @@
       <pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/post/beijing1/</guid>
-      
-        <description></description>
-      
-    </item>
-    
-    <item>
-      <title>雍和宫、什刹海、长安街、北化</title>
-      <link>http://localhost:1313/post/beijing2/</link>
-      <pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/post/beijing2/</guid>
       
         <description></description>
       

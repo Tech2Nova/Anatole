@@ -124,6 +124,12 @@
                 href="http://localhost:1313/tags/"
                 />
   </url><url>
+    <loc>http://localhost:1313/post/beijing2/</loc>
+    <lastmod>2026-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/%E6%97%85%E8%A1%8C/</loc>
+    <lastmod>2026-01-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/post/icassp_reject/</loc>
     <lastmod>2026-01-23T00:00:00+00:00</lastmod>
   </url><url>
@@ -194,20 +200,17 @@
     <loc>http://localhost:1313/post/website_idea/</loc>
     <lastmod>2025-11-21T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/post/beijing1/</loc>
+    <lastmod>2025-10-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/post/wujunjie/</loc>
     <lastmod>2025-09-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/%E6%97%85%E8%A1%8C/</loc>
-    <lastmod>2025-08-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/neimeng2/</loc>
     <lastmod>2025-08-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/neimeng1/</loc>
     <lastmod>2025-08-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/post/beijing1/</loc>
-    <lastmod>2025-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/sanya/</loc>
     <lastmod>2025-06-15T00:00:00+00:00</lastmod>
