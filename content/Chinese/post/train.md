@@ -106,6 +106,24 @@ new Chart(ctx, {
 <br>
 <img src="/images/train/260113-1.png" style="width:75%; display:block; margin:auto;">
 <br>
+
+
+**2026年3月9日**
+可以，有进步，但是感觉进步好慢，感觉网上说三个月练成什么的太夸张了，需要坚持，不过过年快一个月的时间没有锻炼也没有明显退步，还是有一些意外的
+
+不过过完年回来，感觉之前太的太随意的，还是应该上重量，每次力竭才会有效果
+
+另外现在感觉体脂太高，屁股还是没瘦下来，我觉得要有氧和无氧结合才行
+
+
+<br>
+<img src="/images/train/260309-1.jpeg" style="width:75%; display:block; margin:auto;">
+<br>
+
+<br>
+<img src="/images/train/260309-2.jpeg" style="width:75%; display:block; margin:auto;">
+<br>
+
 <!-- <br>
 <img src="/images/train/260113-2.png" style="width:75%; display:block; margin:auto;">
 <br> -->
