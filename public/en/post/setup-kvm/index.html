@@ -11,7 +11,7 @@
   <title>
     
       
-        Setup KVM |
+        Ubuntu Disk Expansion |
       Chenxi Dang
 
   </title>
@@ -20,7 +20,7 @@
   <meta name="author" content="Chenxi Dang" />
   <meta
     name="description"
-    content="在 Ubuntu 主机中搭建 KVM 环境，并安装 QEMU Guest Agent"
+    content="对VMware 中的ubuntu进行磁盘扩容"
   />
   
 
@@ -127,16 +127,16 @@
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/images/site-feature-image.png">
-  <meta name="twitter:title" content="Setup KVM">
-  <meta name="twitter:description" content="在 Ubuntu 主机中搭建 KVM 环境，并安装 QEMU Guest Agent">
+  <meta name="twitter:title" content="Ubuntu Disk Expansion">
+  <meta name="twitter:description" content="对VMware 中的ubuntu进行磁盘扩容">
 
 
 
   
   <meta property="og:url" content="http://localhost:1313/en/post/setup-kvm/">
   <meta property="og:site_name" content="My blog">
-  <meta property="og:title" content="Setup KVM">
-  <meta property="og:description" content="在 Ubuntu 主机中搭建 KVM 环境，并安装 QEMU Guest Agent">
+  <meta property="og:title" content="Ubuntu Disk Expansion">
+  <meta property="og:description" content="对VMware 中的ubuntu进行磁盘扩容">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -155,11 +155,11 @@
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "articleSection": "post",
-        "name": "Setup KVM",
-        "headline": "Setup KVM",
+        "name": "Ubuntu Disk Expansion",
+        "headline": "Ubuntu Disk Expansion",
         "alternativeHeadline": "",
         "description": "
-      在 Ubuntu 主机中搭建 KVM 环境，并安装 QEMU Guest Agent
+      对VMware 中的ubuntu进行磁盘扩容
 
 
     ",
@@ -212,7 +212,7 @@
 
     ,
         "url" : "http:\/\/localhost:1313\/en\/post\/setup-kvm\/",
-        "wordCount" : "309",
+        "wordCount" : "18",
         "genre" : [ 
       
       "Blog"
@@ -501,7 +501,7 @@
     
     <div class="post__content">
       
-        <h1>Setup KVM</h1>
+        <h1>Ubuntu Disk Expansion</h1>
       
       
         <ul class="post__meta">
@@ -518,29 +518,85 @@
           </li>
           <li class="post__meta-item">
             <em class="fas fa-stopwatch post__meta-icon"></em>
-            <span class="post__meta-text">2-minute read</span>
+            <span class="post__meta-text">One-minute read</span>
           </li>
         </ul>
-      <p>在 Ubuntu 16.04（或更高版本）上完整搭建 KVM 虚拟化环境，创建 Windows 7 客户机，安装 Virtio 驱动和 QEMU Guest Agent，实现优雅关机、guest-ping 等高级功能。</p>
-<h3 id="搭建kvm环境安装qemu-guest-agent">搭建KVM环境、安装qemu guest agent</h3>
-<h4 id="1配置环境说明">1、配置环境说明</h4>
-<p>物理主机：Windows11，Intel Core i7-13650HX，VMware Workstation 16 Pro</p>
-<p>VMware客户机：Ubuntu16.04</p>
-<p>KVM客户机：Windows7 ultimate</p>
-<p>注：物理主机要使用Intel处理器，AMD会出现不兼容的问题；KVM客户机可使用Win7，也可以使用Win7旗舰版，提前准备好iso镜像文件</p>
-<h4 id="2安装kvm">2、安装KVM</h4>
-<h5 id="21-虚拟化技术">2.1 虚拟化技术</h5>
-<p>我们通常所说的虚拟化主要是指平台虚拟化技术，通过使⽤控制程序（Control Program，也被称为  Virtual Machine Monitor 或Hypervisor），隐藏特定计算平台的实际物理特性，为⽤户提供抽象的、统 ⼀的、模拟的计算环境（称为虚拟机）。虚拟机中运⾏的操作系统被称为客户机操作系统（Guest  OS），运⾏虚拟机监控器的操作系统被称为主机操作系统（Host OS），当然某些虚拟机监控器可以脱 离操作系统直接运⾏在硬件之上（如 VMWARE 的 ESX 产品）。</p>
-<h5 id="21-kvm介绍">2.1 KVM介绍</h5>
-<p>KVM 全称是基于内核的虚拟机（Kernel-based Virtual Machine），它是一个 Linux 的一个内核模块，该内核模块使得 Linux 变成了一个 Hypervisor：</p>
+      <p>对VMware 中的ubuntu进行磁盘扩容</p>
+<h2 id="为ubuntu系统扩容">为Ubuntu系统扩容</h2>
+<h3 id="1在vmware中扩展硬盘容量">1、在vmware中扩展硬盘容量</h3>
+<p>该步不能有快照，有快照的需要先删除快照</p>
+<p>选择对应虚拟机，编辑虚拟机配置，选择硬盘&ndash;&gt;扩展</p>
+<figure><img src="/images/ubuntu_expand/1.png" width="30%">
+</figure>
+
+<p>选择合适的大小修改</p>
+<figure><img src="/images/ubuntu_expand/2.png" width="50%">
+</figure>
+
+<p>点击扩展，此时只是在ubuntu系统上有分区，还没有扩容到内存中去。</p>
+<h3 id="2ubuntu命令操作安装分区管理工具">2、Ubuntu命令操作：安装分区管理工具</h3>
+<h4 id="第一步打开分区管理工具">第一步：打开分区管理工具</h4>
 <ul>
-<li>它由 Quramnet 开发，该公司于 2008年被 Red Hat 收购。</li>
-<li>它支持 x86 (32 and 64 位), s390, Powerpc 等 CPU。</li>
-<li>它从 Linux 2.6.20 起就作为一模块被包含在 Linux 内核中。</li>
-<li>它需要支持虚拟化扩展的 CPU（即支持Intel VT 或者 AMD-V）。</li>
-<li>它是完全开源的。</li>
+<li>使用命令安装分区管理工具gparted:</li>
 </ul>
-<p><strong>KVM 中，虚拟机被实现为常规的 Linux 进程，由标准 Linux 调度程序进行调度</strong>；虚机的每个虚拟 CPU 被实现为一个常规的 Linux 进程。这使得 KMV 能够使用 Linux 内核的已有功能。但是，KVM 本身不执行任何硬件模拟，需要客户空间程序通过 /dev/kvm 接口设置一个客户机虚拟服务器的地址空间，向它提供模拟的 I/O，并将它的视频显示映射回宿主的显示屏。目前这个应用程序是 QEMU。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install gparted
+</span></span></code></pre></div><ul>
+<li>使用命令启动分区管理工具</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo gparted
+</span></span></code></pre></div><figure><img src="/images/ubuntu_expand/3.png" width="50%">
+</figure>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/en/categories/blog/">Blog</a></span>
+
+
+      
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Chenxi Dang
+        2026
+      
+    </li>
+    
+      <li class="footer__item">
+        <a
+          class="link"
+          href="/imprint/"
+          
+          title=""
+        >
+          imprint
+        </a>
+      </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.9531b4a2217a70c5a1fce89c1f81c9ebbdd586708fcd4130b417320c7230c8d6.js"
+    integrity="sha256-lTG0oiF6cMWh/OicH4HJ673VhnCPzUEwtBcyDHIwyNY="
+    crossorigin="anonymous"
+  ></script>
+  <script async defer src=" https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" /></noscript>
+
+</body>
+</html>
+主的显示屏。目前这个应用程序是 QEMU。</p>
 <figure><img src="/images/KVM/137038861_1_20180629063610565.jpeg"
     alt="KVM architecture" width="50%"><figcaption>
       <p>KVM 整体架构图</p>
