@@ -1,4 +1,15 @@
-## 基于CTFd开源仓库的考试平台部署
++++
+author = "chenxi"
+title = "基于Docker容器的攻防测评考试平台部署"
+date = "2026-5-1"
+description = ""
+categories = ["Blog"]
++++
+
+
+<!--more-->
+
+## 本平台基于开源仓库CTFd
 
 ### 一、Windows平台下安装Docker
 
