@@ -1,7 +1,7 @@
 +++
 author = "chenxi"
 title = "基于Docker容器的攻防测评考试平台部署"
-date = "2026-5-1"
+date = "2026-05-01"
 description = ""
 categories = ["Blog"]
 +++
