@@ -19,6 +19,7 @@ main() {
   # Install Dart Sass
   echo "Installing Dart Sass ${DART_SASS_VERSION}..."
   curl -sLJO "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
+  mkdir -p "${HOME}/.local"
   tar -C "${HOME}/.local" -xf "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
   rm "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
   export PATH="${HOME}/.local/dart-sass:${PATH}"
