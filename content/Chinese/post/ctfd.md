@@ -22,13 +22,13 @@ categories = ["Blog"]
 从官网下载完Docker Desktop后，可能会显示当前电脑wsl版本过老，正常来说，点击Try Again--> powershell会运行wsl --update、wsl --install等命令即可解决问题，
 
 <br>
-<img src="/images/docker/2.jpg" style="width:100%; display:block; margin:auto;">
+<img src="/images/docker/2.png" style="width:100%; display:block; margin:auto;">
 <br>
 
 存在一些特殊情况，例如发现无法连接，可以离线下载，从GitHub上（[](https://github.com/microsoft/WSL/releases/download/2.6.3/wsl.2.6.3.0.x64.msi)）下载
 
 <br>
-<img src="/images/docker/1.jpg" style="width:100%; display:block; margin:auto;">
+<img src="/images/docker/1.png" style="width:100%; display:block; margin:auto;">
 <br>
 
 双击wsl.2.6.3.0.x64.msi后，安装成功，运行wsl --status只显示默认版本：2，这说明WSL 核心安装了，但 Linux 发行版还没安装，所以还需要安装ubuntu
@@ -38,19 +38,19 @@ wsl --install -d Ubuntu --web-download
 ```
 
 <br>
-<img src="/images/docker/3.jpg" style="width:100%; display:block; margin:auto;">
+<img src="/images/docker/3.png" style="width:100%; display:block; margin:auto;">
 <br>
 
 下载和安装Ubuntu后，会弹出wsl桌面应用，然后会初始化user和password，我这里设置的是dd和004029
 
 <br>
-<img src="/images/docker/4.jpg" style="width:100%; display:block; margin:auto;">
+<img src="/images/docker/4.png" style="width:100%; display:block; margin:auto;">
 <br>
 
 然后，重启docker desktop，注意要在右下角托盘关闭，然后重新打开
 
 <br>
-<img src="/images/docker/5.jpg" style="width:100%; display:block; margin:auto;">
+<img src="/images/docker/5.png" style="width:100%; display:block; margin:auto;">
 <br>
 
 下面测试docker是否安装成功
@@ -76,7 +76,7 @@ This message shows that your installation appears to be working correctly.
 然而也可能遇到网络问题
 
 <br>
-<img src="/images/docker/6.jpg" style="width:100%; display:block; margin:auto;">
+<img src="/images/docker/6.png" style="width:100%; display:block; margin:auto;">
 <br>
 
 此时，需要给 Docker Desktop 配置 **镜像加速器**。**（如果能连外网则可以跳过这一步）**
@@ -117,7 +117,7 @@ This message shows that your installation appears to be working correctly.
 #### 1.3 docker常见命令
 
 <br>
-<img src="/images/docker/7.jpg" style="width:100%; display:block; margin:auto;">
+<img src="/images/docker/7.png" style="width:100%; display:block; margin:auto;">
 <br>
 
 首先了解部署docker时的项目结构，通常包含Dockerfile、index.php、run.sh这三个文件
@@ -185,7 +185,7 @@ Expose daemon on tcp://localhost:2375 without TLS
 Exposing daemon on TCP without TLS helps legacy clients connect to the daemon. It also makes yourself vulnerable to remote code execution attacks. Use with caution.
 
 <br>
-<img src="/images/docker/8.jpg" style="width:100%; display:block; margin:auto;">
+<img src="/images/docker/8.png" style="width:100%; display:block; margin:auto;">
 <br>
 
 勾选这个选项，然后到CTFd页面，找到plugin-->docker config -->往下滑就可以看到每道题的镜像，再创建题目前一定要先选择镜像，点击submit，然后再去challenge页面创建题目，会自动选择刚刚submit的容器
