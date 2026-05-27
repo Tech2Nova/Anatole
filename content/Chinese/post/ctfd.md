@@ -11,6 +11,8 @@ categories = ["Blog"]
 
 ## 本平台基于开源仓库CTFd
 
+仓库地址 https://github.com/Tech2Nova/CTFd.git 
+
 ### 一、Windows平台下安装Docker
 
 #### 1.1 安装Docker Desktop
