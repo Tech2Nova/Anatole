@@ -5,6 +5,8 @@
     <link>http://localhost:1313/portfolio/</link>
     <description>Recent content in Portfolio on 我的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language><atom:link href="http://localhost:1313/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <managingEditor>Chenxi Dang</managingEditor>
+    <webMaster>Chenxi Dang</webMaster><atom:link href="http://localhost:1313/portfolio/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

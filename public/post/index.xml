@@ -5,13 +5,15 @@
     <link>http://localhost:1313/post/</link>
     <description>Recent content in Posts on 我的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
+    <language>en</language>
+    <managingEditor>Chenxi Dang</managingEditor>
+    <webMaster>Chenxi Dang</webMaster>
     <lastBuildDate>Fri, 01 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>😋 没错！点击这里！</title>
       <link>http://localhost:1313/post/click_here/</link>
       <pubDate>Sat, 08 Nov 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/click_here/</guid>
       
         <description></description>
@@ -19,21 +21,10 @@
     </item>
     
     <item>
-      <title>健身记录</title>
-      <link>http://localhost:1313/post/train/</link>
-      <pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/post/train/</guid>
-      
-        <description>&lt;p&gt;持续更新&amp;hellip;&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
       <title>基于Docker容器的攻防测评考试平台部署</title>
       <link>http://localhost:1313/post/ctfd/</link>
       <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/ctfd/</guid>
       
         <description></description>
@@ -44,7 +35,7 @@
       <title>LXC运行脚本</title>
       <link>http://localhost:1313/post/setup_lxc/</link>
       <pubDate>Sat, 31 Jan 2026 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/setup_lxc/</guid>
       
         <description>&lt;p&gt;在 Ubuntu 主机中利用 LXC 容器采集HPC数据&lt;/p&gt;</description>
@@ -55,7 +46,7 @@
       <title>北理、北邮、故宫</title>
       <link>http://localhost:1313/post/beijing2/</link>
       <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/beijing2/</guid>
       
         <description></description>
@@ -66,7 +57,7 @@
       <title>icassp被拒</title>
       <link>http://localhost:1313/post/icassp_reject/</link>
       <pubDate>Fri, 23 Jan 2026 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/icassp_reject/</guid>
       
         <description></description>
@@ -77,7 +68,7 @@
       <title>Linux LXC容器使用</title>
       <link>http://localhost:1313/post/lxc_command/</link>
       <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/lxc_command/</guid>
       
         <description>&lt;p&gt;在 Ubuntu 主机中使用 LXC 容器的各类情况&lt;/p&gt;</description>
@@ -88,7 +79,7 @@
       <title>把期待留给2026！</title>
       <link>http://localhost:1313/post/lonely/</link>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/lonely/</guid>
       
         <description>&lt;p&gt;不如意事常八九，可与语人无二三&lt;/p&gt;</description>
@@ -99,7 +90,7 @@
       <title>生活改变方向的那一刻</title>
       <link>http://localhost:1313/post/father_ill/</link>
       <pubDate>Wed, 31 Dec 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/father_ill/</guid>
       
         <description></description>
@@ -110,7 +101,7 @@
       <title>BiliBili年度总结</title>
       <link>http://localhost:1313/post/bilibili2025/</link>
       <pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/bilibili2025/</guid>
       
         <description></description>
@@ -121,7 +112,7 @@
       <title>visio绘制流程图</title>
       <link>http://localhost:1313/post/workflow-visio/</link>
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/workflow-visio/</guid>
       
         <description></description>
@@ -132,7 +123,7 @@
       <title>当所有人都用上大模型，博客还重要吗？</title>
       <link>http://localhost:1313/post/llm/</link>
       <pubDate>Tue, 23 Dec 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/llm/</guid>
       
         <description></description>
@@ -143,7 +134,7 @@
       <title>何时葡萄先熟透</title>
       <link>http://localhost:1313/post/music_eason/</link>
       <pubDate>Mon, 22 Dec 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/music_eason/</guid>
       
         <description>&lt;p&gt;你要静候 再静候&amp;hellip;&lt;/p&gt;</description>
@@ -154,7 +145,7 @@
       <title>HPC数据与进程执行行为的关联分析</title>
       <link>http://localhost:1313/post/correlation_between_hpc_and_process/</link>
       <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/correlation_between_hpc_and_process/</guid>
       
         <description></description>
@@ -165,7 +156,7 @@
       <title>在 LXC 容器中收集HPC数据</title>
       <link>http://localhost:1313/post/collect_hpc_in_lxc/</link>
       <pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/collect_hpc_in_lxc/</guid>
       
         <description></description>
@@ -176,7 +167,7 @@
       <title>写给未来的自己，也顺便给路过的人</title>
       <link>http://localhost:1313/post/website_idea/</link>
       <pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/website_idea/</guid>
       
         <description></description>
@@ -187,7 +178,7 @@
       <title>雍和宫、什刹海、长安街、北化</title>
       <link>http://localhost:1313/post/beijing1/</link>
       <pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/beijing1/</guid>
       
         <description></description>
@@ -195,10 +186,21 @@
     </item>
     
     <item>
+      <title>健身记录</title>
+      <link>http://localhost:1313/post/train/</link>
+      <pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate>
+      <author>Chenxi Dang</author>
+      <guid>http://localhost:1313/post/train/</guid>
+      
+        <description>从 78kg 到 71kg，记录每一次训练的变化与思考</description>
+      
+    </item>
+    
+    <item>
       <title>与武老师再聚</title>
       <link>http://localhost:1313/post/wujunjie/</link>
       <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/wujunjie/</guid>
       
         <description></description>
@@ -209,7 +211,7 @@
       <title>内蒙游玩（2）- 自驾辉腾锡勒大草原</title>
       <link>http://localhost:1313/post/neimeng2/</link>
       <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/neimeng2/</guid>
       
         <description></description>
@@ -220,7 +222,7 @@
       <title>内蒙游玩（1）</title>
       <link>http://localhost:1313/post/neimeng1/</link>
       <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/neimeng1/</guid>
       
         <description></description>
@@ -231,7 +233,7 @@
       <title>自驾三亚-三亚湾路线</title>
       <link>http://localhost:1313/post/sanya/</link>
       <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/sanya/</guid>
       
         <description></description>
@@ -242,7 +244,7 @@
       <title>Setup Hugo</title>
       <link>http://localhost:1313/post/setup-hugo/</link>
       <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/setup-hugo/</guid>
       
         <description>在 Windows 系统下，利用Scoop安装hugo</description>
@@ -253,7 +255,7 @@
       <title>Setup KVM</title>
       <link>http://localhost:1313/post/setup-kvm/</link>
       <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/setup-kvm/</guid>
       
         <description>在 Ubuntu 主机中搭建 KVM 环境，并安装 QEMU Guest Agent</description>
@@ -264,7 +266,7 @@
       <title>Ubuntu Disk Expansion</title>
       <link>http://localhost:1313/post/setup-kvm/</link>
       <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/setup-kvm/</guid>
       
         <description>对VMware 中的ubuntu进行磁盘扩容</description>
@@ -275,7 +277,7 @@
       <title>林郑月娥来海大做报告</title>
       <link>http://localhost:1313/post/linzhengyuee/</link>
       <pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/post/linzhengyuee/</guid>
       
         <description></description>

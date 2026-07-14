@@ -72,26 +72,45 @@
       {{ end }}
     </ul>
     <ul class="nav__list nav__list--end">
-      {{ if and .IsTranslated hugo.IsMultilingual }}
+      {{ if hugo.IsMultilingual }}
+        {{ $curLang := .Site.Language.Lang }}
+        {{ $path := .RelPermalink }}
+        {{ $defaultLang := site.Home.Sites.Default.Language.Lang }}
         <li class="nav__list-item">
           <div class="optionswitch">
             <input class="optionswitch__picker" type="checkbox" id="languagepicker" hidden />
             <label class="optionswitch__label" for="languagepicker"
-              >{{ .Site.Language.LanguageName }} <i class="fa fa-angle-down" aria-hidden="true"></i
+              >{{ .Site.Language.Label }} <i class="fa fa-angle-down" aria-hidden="true"></i
             ></label>
             <div class="optionswitch__triangle"></div>
             <ul class="optionswitch__list">
-              {{ range $.Translations }}
+              {{ range site.Home.AllTranslations }}
+                {{ $target := .Language.Lang }}
+                {{ $newPath := $path }}
+                {{/* 去掉已有的语言前缀 */}}
+                {{ range site.Home.AllTranslations }}
+                  {{ $p := printf "/%s/" .Language.Lang }}
+                  {{ if hasPrefix $newPath $p }}
+                    {{ $newPath = substr $newPath (len $p) }}
+                  {{ end }}
+                {{ end }}
+                {{/* 确保以 / 开头 */}}
+                {{ if not (hasPrefix $newPath "/") }}
+                  {{ $newPath = printf "/%s" $newPath }}
+                {{ end }}
+                {{/* 目标语言如果不是默认语言，则加上前缀 */}}
+                {{ if ne $target $defaultLang }}
+                  {{ $newPath = printf "/%s%s" $target $newPath }}
+                {{ end }}
                 <li class="optionswitch__list-item">
-                  <a href="{{ .RelPermalink }}" title="{{ .Language.LanguageName }}"
+                  <a href="{{ $newPath | relURL }}" title="{{ .Language.Label }}"
                     ><span
-                      {{ if eq . $.Site.Language }}
+                      {{ if eq $target $curLang }}
                         class="active"
                       {{ end }}
-                      aria-label="{{ i18n "ariaLanguage" }}{{ .Language.LanguageName }}"
-                      >{{ .Language.LanguageName }}</span
-                    >
-                  </a>
+                      >{{ .Language.Label }}</span
+                    ></a
+                  >
                 </li>
               {{ end }}
             </ul>

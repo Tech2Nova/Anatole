@@ -16,11 +16,11 @@
 
   </title>
 
-  <meta name="generator" content="Hugo 0.152.2"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="generator" content="Hugo 0.164.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="author" content="Chenxi Dang" />
   <meta
     name="description"
-    content="Call me Chenxi"
+    content="Software Engineer • Tech Enthusiast • Lifelong Learner"
   />
   
 
@@ -29,8 +29,8 @@
       
   <link
     rel="stylesheet"
-    href="/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
-    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    href="/css/markupHighlight.min.f8ba48d3fd92c731701d9634494275b2f2bc2ad0bea19b438feb41b25052f83b.css"
+    integrity="sha256-&#43;LpI0/2SxzFwHZY0SUJ1svK8KtC&#43;oZtDj&#43;tBslBS&#43;Ds="
     crossorigin="anonymous"
     type="text/css"
   />
@@ -49,8 +49,8 @@
     
     <link
       rel="stylesheet"
-      href="/css/custom.min.9b7b3c8a7f827c4963b69adb800358a8486e53cfdc9af178bed1fd613ab8213c.css"
-      integrity="sha256-m3s8in&#43;CfEljtprbgANYqEhuU8/cmvF4vtH9YTq4ITw="
+      href="/css/custom.min.541d5ee40d0c7a460b5c72b4bf3d4676cb73769e7ff11837787fdc4bf8fc0319.css"
+      integrity="sha256-VB1e5A0MekYLXHK0vz1Gdstzdp5/8Rg3eH/cS/j8Axk="
       crossorigin="anonymous"
       media="screen"
     />
@@ -115,7 +115,12 @@
       integrity="sha256-hyTd&#43;SaN7kUQYPGRlhZHVzx/WS&#43;8zG2Fh0Yjaz&#43;RWBM="
       crossorigin="anonymous"
     ></script>
-  
+  <script
+      type="text/javascript"
+      src="/js/custom.min.cf2369cf850399c902255a1ac756c5de19bf8e4619fb1c9b4f96a58627c21294.js"
+      integrity="sha256-zyNpz4UDmckCJVoax1bF3hm/jkYZ&#43;xybT5alhifCEpQ="
+      crossorigin="anonymous"
+    ></script>
 
   
 
@@ -126,21 +131,21 @@
 
   
   
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/images/site-feature-image.png">
-  <meta name="twitter:title" content="Categories">
-  <meta name="twitter:description" content="Call me Chenxi">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="http://localhost:1313/images/site-feature-image.png">
+	<meta name="twitter:title" content="Categories">
+	<meta name="twitter:description" content="Software Engineer • Tech Enthusiast • Lifelong Learner">
 
 
 
   
   <meta property="og:url" content="http://localhost:1313/en/categories/">
-  <meta property="og:site_name" content="My blog">
-  <meta property="og:title" content="Categories">
-  <meta property="og:description" content="Call me Chenxi">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="website">
-    <meta property="og:image" content="http://localhost:1313/images/site-feature-image.png">
+	<meta property="og:site_name" content="My blog">
+	<meta property="og:title" content="Categories">
+	<meta property="og:description" content="Software Engineer • Tech Enthusiast • Lifelong Learner">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="website">
+		<meta property="og:image" content="http://localhost:1313/images/site-feature-image.png">
 
 
 
@@ -157,12 +162,15 @@
 
 <style>
   .welcome-text {
-      font-size: 2rem;
-      color: #878787;           
+      font-size: 1.6rem;
+      color: #999;
       text-align: center;
       margin: 20px 0;
-      font-weight: bold;
-       
+      font-weight: normal;
+      line-height: 1.8;
+  }
+  .theme--dark .welcome-text {
+      color: #8b8b8b;
   }
 </style>
 </head>
@@ -191,7 +199,7 @@
         </div>
       
       <div class="sidebar__introduction-description">
-        <p>Call me Chenxi</p>
+        <p>Software Engineer • Tech Enthusiast • Lifelong Learner</p>
       </div>
     </div>
     <ul class="sidebar__list">
@@ -265,7 +273,7 @@
       <li class="footer__item">
         <a
           class="link"
-          href="/imprint/"
+          href="/en/imprint/"
           
           title=""
         >
@@ -309,7 +317,7 @@
             
             <a
               
-              href="/"
+              href="/en/"
               
               title=""
               >Home</a
@@ -324,7 +332,7 @@
             
             <a
               
-              href="/post/"
+              href="/en/post/"
               
               title=""
               >Posts</a
@@ -339,7 +347,9 @@
             
             <a
               
-              href="/categories/"
+                class="nav__link--active"
+              
+              href="/en/categories/"
               
               title=""
               >categories</a
@@ -354,7 +364,7 @@
             
             <a
               
-              href="/about/"
+              href="/en/about/"
               
               title=""
               >About</a
@@ -369,7 +379,7 @@
             
             <a
               
-              href="/work/"
+              href="/en/work/"
               
               title=""
               >Work Experience</a
@@ -381,6 +391,9 @@
     </ul>
     <ul class="nav__list nav__list--end">
       
+        
+        
+        
         <li class="nav__list-item">
           <div class="optionswitch">
             <input class="optionswitch__picker" type="checkbox" id="languagepicker" hidden />
@@ -390,24 +403,62 @@
             <div class="optionswitch__triangle"></div>
             <ul class="optionswitch__list">
               
+                
+                
+                
+                
+                  
+                  
+                
+                  
+                  
+                    
+                  
+                
+                
+                
+                  
+                
+                
+                
                 <li class="optionswitch__list-item">
                   <a href="/categories/" title="中文（简体）"
                     ><span
                       
-                      aria-label="中文（简体）"
                       >中文（简体）</span
-                    >
-                  </a>
+                    ></a
+                  >
                 </li>
               
+                
+                
+                
+                
+                  
+                  
+                
+                  
+                  
+                    
+                  
+                
+                
+                
+                  
+                
+                
+                
+                  
+                
                 <li class="optionswitch__list-item">
-                  <a href="/ar/categories/" title="AR"
+                  <a href="/en/categories/" title="English"
                     ><span
                       
-                      aria-label="AR"
-                      >AR</span
-                    >
-                  </a>
+                        class="active"
+                      
+                      >English</span
+                    ></a
+                  >
                 </li>
               
             </ul>
@@ -433,7 +484,7 @@
     "
   >
     
-      <div class="archive__heading">2025</div>
+      <div class="archive__heading">0001</div>
       
         <ul class="archive__list">
           <li class="archive__list-item">
@@ -443,7 +494,7 @@
             <div class="archive__list-date">
               
                 
-                  2025年11月19日
+                  0001年01月01日
                 
 
               
@@ -469,7 +520,7 @@
       <li class="footer__item">
         <a
           class="link"
-          href="/imprint/"
+          href="/en/imprint/"
           
           title=""
         >

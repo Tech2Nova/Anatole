@@ -48,7 +48,7 @@ winget install Hugo.Hugo.Extended
 #在PowerShell中设置远程权限
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 
-# 设置环境变量
+# 设置环境变量,注意这里根据自己电脑的盘符设置！
 $env:SCOOP='D:\Applications\Scoop'
 [Environment]::SetEnvironmentVariable('SCOOP', $env:SCOOP, 'User')
 $env:SCOOP_GLOBAL='F:\GlobalScoopApps'
@@ -60,7 +60,7 @@ $env:SCOOP_GLOBAL='F:\GlobalScoopApps'
 iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
 
 #默认安装 scoop install <软件名>
-scoop install hugo-entend
+scoop install hugo-entended
 
 # global目录下安装：scoop install -g <软件名>
 

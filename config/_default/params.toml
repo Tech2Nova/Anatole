@@ -2,7 +2,7 @@
 title = "I'm Chenxi Dang"
 author = "Chenxi Dang"
 #copyright = "2020-2021"
-description = "Call me Chenxi"
+description = "Software Engineer • Tech Enthusiast • Lifelong Learner"
 welcomeText = "👋 花径不曾缘客扫，蓬门今始为君开。"
 profilePicture = "images/profile.jpg"
 keywords = ""
@@ -13,7 +13,7 @@ customCss = [
     "css/custom.css"
   ]
 # example ["js/custom.js"]
-customJs = [] 
+customJs = ["js/custom.js"] 
 mainSections = ["post"]
 images = ["images/site-feature-image.png"]
 doNotLoadAnimations = false

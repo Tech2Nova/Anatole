@@ -18,20 +18,18 @@ thumbnail= "images/neimeng/museum1.jpg"
 
 **内蒙博物馆还是挺宏伟的，这是个新馆，据说和国博差不多大，我们三个转了大半天，运动量超标**
 
-<br>
-<img src="/images/neimeng/museum3.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/neimeng/museum4.jpg" style="width:75%; display:block; margin:auto;">
-<br>
+{{< gallery >}}
+/images/neimeng/museum3.jpg
+/images/neimeng/museum4.jpg
+{{< /gallery >}}
 
 **下面三个都是镇馆之宝**
 
-<img src="/images/neimeng/museum5.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/neimeng/museum6.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/neimeng/museum7.jpg" style="width:75%; display:block; margin:auto;">
-<br>
+{{< gallery >}}
+/images/neimeng/museum5.jpg
+/images/neimeng/museum6.jpg
+/images/neimeng/museum7.jpg
+{{< /gallery >}}
 
 **下午回市区的车上，三个人全睡着了，到地方司机才把我们喊醒哈哈哈**
 
@@ -43,17 +41,14 @@ thumbnail= "images/neimeng/museum1.jpg"
 <br>
 
 **大召无量寺**
-<br>
-<img src="/images/neimeng/dazhao7.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/neimeng/dazhao1.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/neimeng/dazhao2.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/neimeng/dazhao3.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/neimeng/dazhao5.jpg" style="width:75%; display:block; margin:auto;">
-<br>
+
+{{< gallery >}}
+/images/neimeng/dazhao7.jpg
+/images/neimeng/dazhao1.jpg
+/images/neimeng/dazhao2.jpg
+/images/neimeng/dazhao3.jpg
+/images/neimeng/dazhao5.jpg
+{{< /gallery >}}
 
 
 
@@ -61,20 +56,17 @@ thumbnail= "images/neimeng/museum1.jpg"
 
 也是吃上网红店了
 
-<img src="/images/neimeng/yang0.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/neimeng/yang1.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-
-<img src="/images/neimeng/yang2.jpg" style="width:75%; display:block; margin:auto;">
-<br>
+{{< gallery >}}
+/images/neimeng/yang0.jpg
+/images/neimeng/yang1.jpg
+/images/neimeng/yang2.jpg
+{{< /gallery >}}
 
 这个奶皮子酸奶是真不错呀，狂炫两碗
 
-<img src="/images/neimeng/tonghua1.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-
-<img src="/images/neimeng/tonghua2.jpg" style="width:75%; display:block; margin:auto;">
-<br>
+{{< gallery >}}
+/images/neimeng/tonghua1.jpg
+/images/neimeng/tonghua2.jpg
+{{< /gallery >}}
 
 **未完，后续有时间添加山西的部分**

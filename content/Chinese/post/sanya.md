@@ -15,12 +15,11 @@ thumbnail= "images/sanya/xidao2.jpg"
 
 先来一张帅照
 
-<img src="/images/sanya/xidao1.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/sanya/xidao2.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/sanya/xidao3.jpg" style="width:75%; display:block; margin:auto;">
-<br>
+{{< gallery >}}
+/images/sanya/xidao1.jpg
+/images/sanya/xidao2.jpg
+/images/sanya/xidao3.jpg
+{{< /gallery >}}
 <video controls style="width:75%; display:block; margin: 0 auto;">
   <source src="/images/sanya/xidao4.mp4">
 </video>
@@ -45,29 +44,23 @@ thumbnail= "images/sanya/xidao2.jpg"
 
 晚上去椰梦长廊看了夕阳，然后吃了海鲜大餐，可惜海鲜大餐忘记拍照了
 
-<img src="/images/sanya/yemeng1.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/sanya/yemeng2.jpg" style="width:75%; display:block; margin:auto;">
-<br>
+{{< gallery >}}
+/images/sanya/yemeng1.jpg
+/images/sanya/yemeng2.jpg
+{{< /gallery >}}
 
 **三亚南山海上观音**
 
-<img src="/images/sanya/nanhai3.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/sanya/nanhai4.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/sanya/nanhai5.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/sanya/nanhai1.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/sanya/nanhai2.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/sanya/nanhai6.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/sanya/nanhai7.jpg" style="width:75%; display:block; margin:auto;">
-<br>
-<img src="/images/sanya/nanhai8.jpg" style="width:75%; display:block; margin:auto;">
-<br>
+{{< gallery >}}
+/images/sanya/nanhai3.jpg
+/images/sanya/nanhai4.jpg
+/images/sanya/nanhai5.jpg
+/images/sanya/nanhai1.jpg
+/images/sanya/nanhai2.jpg
+/images/sanya/nanhai6.jpg
+/images/sanya/nanhai7.jpg
+/images/sanya/nanhai8.jpg
+{{< /gallery >}}
 <br>
 <video controls style="width:75%; display:block; margin: 0 auto;">
   <source src="/images/sanya/nanshan.mp4">

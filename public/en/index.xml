@@ -6,12 +6,14 @@
     <description>Recent content on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <managingEditor>Chenxi Dang</managingEditor>
+    <webMaster>Chenxi Dang</webMaster>
     <lastBuildDate>Fri, 21 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>http://localhost:1313/en/about/</link>
       <pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/en/about/</guid>
       
         <description>Profile of Dang Chenxi</description>
@@ -22,7 +24,7 @@
       <title>Awards</title>
       <link>http://localhost:1313/en/awards/</link>
       <pubDate>Fri, 21 Nov 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/en/awards/</guid>
       
         <description>chenxi Awards, an annual literary award for the best science fiction or fantasy works</description>
@@ -33,7 +35,7 @@
       <title>Setup LXC</title>
       <link>http://localhost:1313/en/post/setup-lxc/</link>
       <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/en/post/setup-lxc/</guid>
       
         <description>在 Ubuntu 主机中创建 LXC 容器</description>
@@ -44,7 +46,7 @@
       <title>Setup Hugo</title>
       <link>http://localhost:1313/en/post/setup-hugo/</link>
       <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/en/post/setup-hugo/</guid>
       
         <description>在 Windows 系统下，利用Scoop安装hugo</description>
@@ -55,7 +57,7 @@
       <title>Setup KVM</title>
       <link>http://localhost:1313/en/post/setup-kvm/</link>
       <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/en/post/setup-kvm/</guid>
       
         <description>在 Ubuntu 主机中搭建 KVM 环境，并安装 QEMU Guest Agent</description>
@@ -66,7 +68,7 @@
       <title>Ubuntu Disk Expansion</title>
       <link>http://localhost:1313/en/post/setup-kvm/</link>
       <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/en/post/setup-kvm/</guid>
       
         <description>对VMware 中的ubuntu进行磁盘扩容</description>
@@ -77,7 +79,7 @@
       <title>certifications</title>
       <link>http://localhost:1313/en/certifications/</link>
       <pubDate>Sun, 10 Apr 2022 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/en/certifications/</guid>
       
         <description>chenxi Certifications</description>
@@ -88,7 +90,7 @@
       <title></title>
       <link>http://localhost:1313/en/archives/</link>
       <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/en/archives/</guid>
       
         <description></description>
@@ -99,7 +101,7 @@
       <title></title>
       <link>http://localhost:1313/en/work/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/en/work/</guid>
       
         <description>&lt;h3 id=&#34;student-leadership--organizational-experience&#34;&gt;Student Leadership &amp;amp; Organizational Experience&lt;/h3&gt;
@@ -113,7 +115,7 @@
       <title>Contact</title>
       <link>http://localhost:1313/en/contact/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/en/contact/</guid>
       
         <description>Contact Page</description>
@@ -124,7 +126,7 @@
       <title></title>
       <link>http://localhost:1313/en/imprint/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+      <author>Chenxi Dang</author>
       <guid>http://localhost:1313/en/imprint/</guid>
       
         <description>&lt;h1 id=&#34;legal-disclosure&#34;&gt;Legal Disclosure&lt;/h1&gt;

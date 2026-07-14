@@ -39,7 +39,7 @@
   <!-- CSS -->
 
   {{ $contentRatio := or site.Params.contentratio 0.6 -}}
-  {{ $languageDirection := or site.Language.LanguageDirection "ltr" -}}
+  {{ $languageDirection := or site.Language.Direction "ltr" -}}
   {{ $vars := dict
     "text_direction" $languageDirection
     "content_ratio" (printf "%f%%" (mul $contentRatio 100))
@@ -50,7 +50,7 @@
   {{ $options := dict
     "transpiler" "dartsass"
     "vars" $vars
-    "targetPath" (printf "css/anatole%s.css" (cond (eq site.Language.LanguageDirection "") "" (printf ".%s" site.Language.LanguageDirection)))
+    "targetPath" (printf "css/anatole%s.css" (cond (eq site.Language.Direction "") "" (printf ".%s" site.Language.Direction)))
   -}}
   {{ with resources.Get "scss/main.scss" -}}
     {{ if hugo.IsProduction -}}
@@ -258,12 +258,15 @@
 
 <style>
   .welcome-text {
-      font-size: 2rem;
-      color: #878787;          /* 示例样式，根据需要改 */
+      font-size: 1.6rem;
+      color: #999;
       text-align: center;
       margin: 20px 0;
-      font-weight: bold;
-      /* 添加更多你想要的样式 */
+      font-weight: normal;
+      line-height: 1.8;
+  }
+  .theme--dark .welcome-text {
+      color: #8b8b8b;
   }
 </style>
 </head>
