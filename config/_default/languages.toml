@@ -5,6 +5,7 @@ label = "English"
 contentDir = "content/english"
 [en.params]
 direction = "ltr"
+label = "English"
 
 [zh]
 title = "我的博客"                  # 中文站点标题
@@ -13,6 +14,7 @@ label = "中文（简体）"              # 语言切换按钮里显示这两个
 contentDir = "content/Chinese"          # ← 中文内容放这个文件夹
 [zh.params]
 direction = "ltr"          # 中文从左到右
+label = "中文（简体）"
 
 
 

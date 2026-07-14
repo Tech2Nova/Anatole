@@ -1,7 +1,7 @@
 <!doctype html>
 <html
-  dir="{{ .Site.Language.Params.direction | default "ltr" }}"
-  lang="{{- site.Language.Lang -}}"
+  dir="{{ .Language.Params.direction | default "ltr" }}"
+  lang="{{- .Language.Lang -}}"
   data-theme="{{- .Site.Params.displayMode -}}"
   {{ if eq .Site.Params.displayMode "dark" }}
     class="html theme--dark"

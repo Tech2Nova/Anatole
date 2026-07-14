@@ -73,19 +73,21 @@
     </ul>
     <ul class="nav__list nav__list--end">
       {{ if hugo.IsMultilingual }}
-        {{ $curLang := .Site.Language.Lang }}
+        {{ $curLang := .Language.Lang }}
+        {{ $curLabel := .Language.Params.label | default .Language.Lang }}
         {{ $path := .RelPermalink }}
-        {{ $defaultLang := site.Home.Sites.Default.Language.Lang }}
+        {{ $defaultLang := site.Home.Language.Lang }}
         <li class="nav__list-item">
           <div class="optionswitch">
             <input class="optionswitch__picker" type="checkbox" id="languagepicker" hidden />
             <label class="optionswitch__label" for="languagepicker"
-              >{{ .Site.Language.Label }} <i class="fa fa-angle-down" aria-hidden="true"></i
+              >{{ $curLabel }} <i class="fa fa-angle-down" aria-hidden="true"></i
             ></label>
             <div class="optionswitch__triangle"></div>
             <ul class="optionswitch__list">
               {{ range site.Home.AllTranslations }}
                 {{ $target := .Language.Lang }}
+                {{ $targetLabel := .Language.Params.label | default .Language.Lang }}
                 {{ $newPath := $path }}
                 {{/* 去掉已有的语言前缀 */}}
                 {{ range site.Home.AllTranslations }}
@@ -103,12 +105,12 @@
                   {{ $newPath = printf "/%s%s" $target $newPath }}
                 {{ end }}
                 <li class="optionswitch__list-item">
-                  <a href="{{ $newPath | relURL }}" title="{{ .Language.Label }}"
+                  <a href="{{ $newPath | relURL }}" title="{{ $targetLabel }}"
                     ><span
                       {{ if eq $target $curLang }}
                         class="active"
                       {{ end }}
-                      >{{ .Language.Label }}</span
+                      >{{ $targetLabel }}</span
                     ></a
                   >
                 </li>

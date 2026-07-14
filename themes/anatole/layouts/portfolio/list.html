@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{ $data := index hugo.Data .Site.Language.Lang "portfolio" }}
+  {{ $data := index hugo.Data .Language.Lang "portfolio" }}
   {{ if not $data }}{{ $data = hugo.Data.portfolio }}{{ end }}
   {{ range $index, $elemen:= $data.portfolioitems }}
     <div
