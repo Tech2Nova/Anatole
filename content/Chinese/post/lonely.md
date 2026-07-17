@@ -5,6 +5,7 @@ date = "2026-01-01"
 description = ""
 categories = ["思考"]
 thumbnail= "images/newyear-cover.png"
+password = "004029"  
 +++
 不如意事常八九，可与语人无二三
 

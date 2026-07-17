@@ -593,7 +593,8 @@
             <span class="post__meta-text">2-minute read</span>
           </li>
         </ul>
-      <h4 id="1编写脚本">1、编写脚本</h4>
+      
+        <h4 id="1编写脚本">1、编写脚本</h4>
 <p>通过在完全隔离、可精确复位的LXC容器环境中，分别运行10次良性程序（benign）和10次勒索软件（ransomware），利用Linux perf工具采集容器运行期间的硬件性能事件（指令数、缓存命中/缺失、分支预测等），定量对比两类程序在微体系结构层面的行为差异，为后续基于HPC的勒索软件检测方法提供真实、可复现的实验数据。</p>
 <p><strong>实验环境</strong></p>
 <ul>
@@ -729,6 +730,7 @@
 </span></span></code></pre></div><h4 id="2数据结果">2、数据结果</h4>
 <img src="\images\lxc\compare.png" alt="compare" style="zoom:50%;" />
 <p>对勒索加密函数和正常加密函数分别重复运行5次，采集了5个事件的HPCs数值，求平均后可视化如上，两者之间差异明显，之后可以从代码层面分析造成这种差异的原因</p>
+      
 </div>
     <div class="post__footer">
       

@@ -4,6 +4,7 @@ description = "党晨曦个人简介"
 date = "2025-11-21"
 aliases = ["about", "about-me", "contact"]
 author = "党晨曦"
+password = "004029"
 +++
 
 # 党晨曦

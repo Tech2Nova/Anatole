@@ -5,6 +5,7 @@ date = "2025-12-31"
 description = ""
 categories = ["思考"]
 thumbnail= "images/alone.jpg"
+password = "004029"  
 +++
 
 
