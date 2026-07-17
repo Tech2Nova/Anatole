@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on 我的博客</title>
-    <link>https://tech2nova.github.io/categories/blog/</link>
+    <link>http://localhost:1313/categories/blog/</link>
     <description>Recent content in Blog on 我的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <managingEditor>Chenxi Dang</managingEditor>
     <webMaster>Chenxi Dang</webMaster>
-    <lastBuildDate>Fri, 01 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://tech2nova.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>基于Docker容器的攻防测评考试平台部署</title>
-      <link>https://tech2nova.github.io/post/ctfd/</link>
+      <link>http://localhost:1313/post/ctfd/</link>
       <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
       <author>Chenxi Dang</author>
-      <guid>https://tech2nova.github.io/post/ctfd/</guid>
+      <guid>http://localhost:1313/post/ctfd/</guid>
       
         <description></description>
       
@@ -22,10 +22,10 @@
     
     <item>
       <title>LXC运行脚本</title>
-      <link>https://tech2nova.github.io/post/setup_lxc/</link>
+      <link>http://localhost:1313/post/setup_lxc/</link>
       <pubDate>Sat, 31 Jan 2026 00:00:00 +0000</pubDate>
       <author>Chenxi Dang</author>
-      <guid>https://tech2nova.github.io/post/setup_lxc/</guid>
+      <guid>http://localhost:1313/post/setup_lxc/</guid>
       
         <description>&lt;p&gt;在 Ubuntu 主机中利用 LXC 容器采集HPC数据&lt;/p&gt;</description>
       
@@ -33,10 +33,10 @@
     
     <item>
       <title>Linux LXC容器使用</title>
-      <link>https://tech2nova.github.io/post/lxc_command/</link>
+      <link>http://localhost:1313/post/lxc_command/</link>
       <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
       <author>Chenxi Dang</author>
-      <guid>https://tech2nova.github.io/post/lxc_command/</guid>
+      <guid>http://localhost:1313/post/lxc_command/</guid>
       
         <description>&lt;p&gt;在 Ubuntu 主机中使用 LXC 容器的各类情况&lt;/p&gt;</description>
       
@@ -44,10 +44,10 @@
     
     <item>
       <title>visio绘制流程图</title>
-      <link>https://tech2nova.github.io/post/workflow-visio/</link>
+      <link>http://localhost:1313/post/workflow-visio/</link>
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
       <author>Chenxi Dang</author>
-      <guid>https://tech2nova.github.io/post/workflow-visio/</guid>
+      <guid>http://localhost:1313/post/workflow-visio/</guid>
       
         <description></description>
       
@@ -55,10 +55,10 @@
     
     <item>
       <title>HPC数据与进程执行行为的关联分析</title>
-      <link>https://tech2nova.github.io/post/correlation_between_hpc_and_process/</link>
+      <link>http://localhost:1313/post/correlation_between_hpc_and_process/</link>
       <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
       <author>Chenxi Dang</author>
-      <guid>https://tech2nova.github.io/post/correlation_between_hpc_and_process/</guid>
+      <guid>http://localhost:1313/post/correlation_between_hpc_and_process/</guid>
       
         <description></description>
       
@@ -66,10 +66,10 @@
     
     <item>
       <title>在 LXC 容器中收集HPC数据</title>
-      <link>https://tech2nova.github.io/post/collect_hpc_in_lxc/</link>
+      <link>http://localhost:1313/post/collect_hpc_in_lxc/</link>
       <pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
       <author>Chenxi Dang</author>
-      <guid>https://tech2nova.github.io/post/collect_hpc_in_lxc/</guid>
+      <guid>http://localhost:1313/post/collect_hpc_in_lxc/</guid>
       
         <description></description>
       
@@ -77,10 +77,10 @@
     
     <item>
       <title>Setup Hugo</title>
-      <link>https://tech2nova.github.io/post/setup-hugo/</link>
+      <link>http://localhost:1313/post/setup-hugo/</link>
       <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
       <author>Chenxi Dang</author>
-      <guid>https://tech2nova.github.io/post/setup-hugo/</guid>
+      <guid>http://localhost:1313/post/setup-hugo/</guid>
       
         <description>在 Windows 系统下，利用Scoop安装hugo</description>
       
@@ -88,10 +88,10 @@
     
     <item>
       <title>Setup KVM</title>
-      <link>https://tech2nova.github.io/post/setup-kvm/</link>
+      <link>http://localhost:1313/post/setup-kvm/</link>
       <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
       <author>Chenxi Dang</author>
-      <guid>https://tech2nova.github.io/post/setup-kvm/</guid>
+      <guid>http://localhost:1313/post/setup-kvm/</guid>
       
         <description>在 Ubuntu 主机中搭建 KVM 环境，并安装 QEMU Guest Agent</description>
       
@@ -99,10 +99,10 @@
     
     <item>
       <title>Ubuntu Disk Expansion</title>
-      <link>https://tech2nova.github.io/post/setup-kvm/</link>
+      <link>http://localhost:1313/post/setup-kvm/</link>
       <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
       <author>Chenxi Dang</author>
-      <guid>https://tech2nova.github.io/post/setup-kvm/</guid>
+      <guid>http://localhost:1313/post/setup-kvm/</guid>
       
         <description>对VMware 中的ubuntu进行磁盘扩容</description>
       
