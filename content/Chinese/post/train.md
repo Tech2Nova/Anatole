@@ -5,6 +5,7 @@ date = "2025-09-28"
 description = "从 78kg 到 71kg，记录每一次训练的变化与思考"
 categories = ["动态"]
 thumbnail = "images/fitness-cover.png"
+weight = -8
 +++
 
 2025 年 10 月，我决定开始健身。初衷很简单——想让身体状态更好一些，也想看看自己能坚持多久。这篇文章会持续更新，记录体重变化、训练感悟和阶段性的进步。

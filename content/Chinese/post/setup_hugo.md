@@ -6,6 +6,7 @@ author = "chenxi"
 description = "在 Windows 系统下，利用Scoop安装hugo"
 
 categories = ["Blog"]
+thumbnail = "/images/blog-thumbnail.png"
 
 +++
 在 Windows 系统下，利用Scoop安装hugo

@@ -1,0 +1,70 @@
+<!doctype html>
+<html
+  dir="{{ .Language.Params.direction | default "ltr" }}"
+  lang="{{- .Language.Lang -}}"
+  data-theme="{{- .Site.Params.displayMode -}}"
+  {{ if eq .Site.Params.displayMode "dark" }}
+    class="html theme--dark"
+  {{ else }}
+    class="html theme--light"
+  {{ end }}
+>
+  {{- partial "head.html" . -}}
+  <body class="body">
+    <div class="start-page">
+      <!-- 背景层 -->
+      <div class="start-bg">
+        <div class="start-bg-overlay"></div>
+      </div>
+
+      <!-- 内容层 -->
+      <div class="start-content">
+        <!-- 头像 -->
+        <div class="start-avatar-wrapper">
+          <img
+            class="start-avatar"
+            src="{{ .Site.Params.profilePicture | relURL }}"
+            alt="{{ .Site.Params.author }}"
+          />
+        </div>
+
+        <!-- 名字 -->
+        <h1 class="start-name">{{ .Site.Params.author }}</h1>
+
+        <!-- 歌词 -->
+        <div class="start-lyrics">
+          <p class="start-lyrics__main">流水很清楚惜花这个责任<br>真的身份不过送运<br>这趟旅行若算开心<br>亦是无负这一生</p>
+          <p class="start-lyrics__credit">——《落花流水》&nbsp;陈奕迅&nbsp;/&nbsp;词：黄伟文</p>
+        </div>
+
+        <!-- 导航按钮 -->
+        <nav class="start-nav">
+          <a href="{{ "/blog/" | relLangURL }}" class="start-btn">
+            <span>博客</span>
+          </a>
+          <a href="{{ "/post/" | relLangURL }}" class="start-btn">
+            <span>文章</span>
+          </a>
+          <a href="{{ "/about/" | relLangURL }}" class="start-btn">
+            <span>关于</span>
+          </a>
+        </nav>
+
+        <!-- 社交图标 -->
+        <div class="start-social">
+          {{ range $item := .Site.Params.socialIcons }}
+            <a
+              href="{{ $item.url }}"
+              target="_blank"
+              rel="noopener me"
+              aria-label="{{ $item.title }}"
+              title="{{ $item.title }}"
+            >
+              <i class="{{ $item.icon }}" aria-hidden="true"></i>
+            </a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

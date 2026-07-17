@@ -3,6 +3,7 @@ title = "在 LXC 容器中收集HPC数据"
 author = "chenxi"
 date = 2025-11-26
 categories = ["Blog"]
+thumbnail = "/images/blog-thumbnail.png"
 
 +++
 

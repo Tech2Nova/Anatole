@@ -5,6 +5,7 @@ date = 2025-03-30
 author = "chenxi"
 description = "对VMware 中的ubuntu进行磁盘扩容"
 categories = ["Blog"]
+thumbnail = "/images/blog-thumbnail.png"
 
 +++
 对VMware 中的ubuntu进行磁盘扩容

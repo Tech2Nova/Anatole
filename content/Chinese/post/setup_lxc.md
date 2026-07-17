@@ -3,6 +3,7 @@ title = "LXC运行脚本"
 author = "chenxi"
 date = 2026-01-31
 categories = ["Blog"]
+thumbnail = "/images/blog-thumbnail.png"
 
 +++
 在 Ubuntu 主机中利用 LXC 容器采集HPC数据

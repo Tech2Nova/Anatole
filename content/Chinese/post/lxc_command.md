@@ -3,6 +3,7 @@ title = "Linux LXC容器使用"
 author = "chenxi"
 date = 2026-01-20
 categories = ["Blog"]
+thumbnail = "/images/blog-thumbnail.png"
 
 +++
 在 Ubuntu 主机中使用 LXC 容器的各类情况

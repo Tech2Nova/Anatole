@@ -5,6 +5,7 @@ author = "chenxi"
 date = 2025-11-19
 description = "在 Ubuntu 主机中创建 LXC 容器"
 categories = ["Blog"]
+thumbnail = "/images/blog-thumbnail.png"
 
 +++
 在 Ubuntu 主机中创建 LXC 容器

@@ -3,6 +3,7 @@ title = "HPC数据与进程执行行为的关联分析"
 author = "chenxi"
 date = 2025-12-10
 categories = ["Blog"]
+thumbnail = "/images/blog-thumbnail.png"
 
 +++
 

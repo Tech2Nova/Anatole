@@ -6,6 +6,7 @@ author = "chenxi"
 description = "在 Ubuntu 主机中搭建 KVM 环境，并安装 QEMU Guest Agent"
 
 categories = ["Blog"]
+thumbnail = "/images/blog-thumbnail.png"
 
 # 文章特色图片（Anatole 专用的 thumbnail 参数）
 # 把 feature.png 放在 static/images/ 目录下即可

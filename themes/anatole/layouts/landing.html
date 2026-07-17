@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html
+  dir="{{ .Language.Params.direction | default "ltr" }}"
+  lang="{{- .Language.Lang -}}"
+  data-theme="{{- .Site.Params.displayMode -}}"
+  {{ if eq .Site.Params.displayMode "dark" }}
+    class="html theme--dark"
+  {{ else }}
+    class="html theme--light"
+  {{ end }}
+>
+  {{- partial "head.html" . -}}
+  <body class="body landing-page">
+    <div class="landing-container">
+      <!-- 背景层 -->
+      <div class="landing-bg"></div>
+      <canvas class="landing-particles" aria-hidden="true"></canvas>
+
+      <!-- 内容层 -->
+      <div class="landing-content">
+        <!-- 头像 -->
+        <div class="landing-avatar-wrapper">
+          <img
+            class="landing-avatar"
+            src="{{ .Site.Params.profilePicture | relURL }}"
+            alt="{{ .Site.Params.author }}"
+          />
+        </div>
+
+        <!-- 名字 -->
+        <h1 class="landing-name">{{ .Site.Params.author }}</h1>
+
+        <!-- 描述 -->
+        <p class="landing-desc">{{ .Site.Params.description }}</p>
+
+        <!-- 引言 -->
+        {{ with .Site.Params.welcomeText }}
+          <p class="landing-quote">{{ . | markdownify }}</p>
+        {{ end }}
+
+        <!-- 导航按钮 -->
+        <nav class="landing-nav">
+          <a href="{{ "/" | relLangURL }}" class="landing-btn landing-btn--home">
+            <span>{{ i18n "home" | default "首页" }}</span>
+          </a>
+          <a href="{{ "/post/" | relLangURL }}" class="landing-btn landing-btn--blog">
+            <span>{{ i18n "blog" | default "博客" }}</span>
+          </a>
+          <a href="{{ "/about/" | relLangURL }}" class="landing-btn landing-btn--about">
+            <span>{{ i18n "about" | default "关于" }}</span>
+          </a>
+        </nav>
+
+        <!-- 社交图标 -->
+        <div class="landing-social">
+          {{ range $item := .Site.Params.socialIcons }}
+            <a
+              href="{{ $item.url }}"
+              target="_blank"
+              rel="noopener me"
+              aria-label="{{ $item.title }}"
+              title="{{ $item.title }}"
+            >
+              <i class="{{ $item.icon }}" aria-hidden="true"></i>
+            </a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    <!-- 引入粒子特效 JS -->
+    {{ $landingJS := resources.Get "js/landing-particles.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $landingJS.RelPermalink }}" integrity="{{ $landingJS.Data.Integrity }}" crossorigin="anonymous"></script>
+  </body>
+</html>

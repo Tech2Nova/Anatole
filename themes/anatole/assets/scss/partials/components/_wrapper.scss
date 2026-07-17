@@ -18,11 +18,11 @@
     width: 100%;
 
     @include conf.desktop {
-      width: hugo.$content-ratio;
+      width: 65%;
     }
 
     @include conf.widescreen {
-      width: hugo.$content-ratio-wide;
+      width: 65%;
     }
 
     &--fullscreen {
@@ -44,12 +44,12 @@
     padding: 16px 0;
 
     @include conf.desktop {
-      width: hugo.$sidebar_ratio;
+      width: 35%;
       padding: 0;
     }
 
     @include conf.widescreen {
-      width: hugo.$sidebar_ratio_wide;
+      width: 35%;
     }
 
     &--hidden {
