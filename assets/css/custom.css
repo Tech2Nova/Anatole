@@ -789,15 +789,36 @@ blockquote {
     50%      { opacity: 0; }
 }
 
-/* --- 粒子画布 --- */
-.sidebar-particles {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* --- 拉布拉多犬动态形象 --- */
+.sidebar-labrador {
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 120px;
     pointer-events: none;
     z-index: 0;
+    margin: 10px 0;
+    overflow: visible;
+}
+
+/* ── 活动区域 ── */
+.labrador-walk-area {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* ── 小狗图片 ── */
+.labrador-dog {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: auto;
+    max-height: 110px;
+    object-fit: contain;
+    transition: left 0.8s ease-in-out;
+    image-rendering: auto;
 }
 
 /* 确保侧边栏内容在粒子之上 */
@@ -855,7 +876,7 @@ blockquote {
 
 /* 移动端适配 */
 @media (max-width: 960px) {
-    .sidebar-particles {
-        display: none; /* 移动端隐藏粒子以节省性能 */
+    .sidebar-labrador {
+        display: none; /* 移动端隐藏拉布拉多犬以节省空间 */
     }
 }

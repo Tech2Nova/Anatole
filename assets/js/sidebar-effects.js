@@ -1,5 +1,5 @@
 // === 侧边栏动态特效 ===
-// 包含：打字机效果、粒子背景、头像光晕
+// 包含：打字机效果、拉布拉多犬动态形象、头像光晕
 
 document.addEventListener('DOMContentLoaded', function () {
   const sidebar = document.querySelector('.sidebar');
@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // ========== 1. 打字机效果 ==========
   initTypewriter(sidebar);
 
-  // ========== 2. 粒子/星光背景 ==========
-  initParticles(sidebar);
+  // ========== 2. 拉布拉多犬动态形象 ==========
+  initLabrador(sidebar);
 
   // ========== 3. 头像光晕脉动 ==========
   initAvatarGlow(sidebar);
@@ -25,23 +25,20 @@ function initTypewriter(sidebar) {
   const fullText = descEl.textContent.trim();
   if (!fullText) return;
 
-  // 清空并逐字打印
   descEl.textContent = '';
   descEl.style.minHeight = descEl.style.minHeight || '1.8em';
 
-  // 添加光标元素
   const cursor = document.createElement('span');
   cursor.className = 'typewriter-cursor';
   cursor.textContent = '|';
   descEl.appendChild(cursor);
 
   let charIndex = 0;
-  const typingSpeed = 60;   // 打字速度(ms)
-  const startDelay = 800;   // 开始延迟
+  const typingSpeed = 60;
+  const startDelay = 800;
 
   function typeChar() {
     if (charIndex < fullText.length) {
-      // 在当前字符前插入（光标始终在末尾）
       const textNode = document.createTextNode(fullText[charIndex]);
       descEl.insertBefore(textNode, cursor);
       charIndex++;
@@ -53,148 +50,73 @@ function initTypewriter(sidebar) {
 }
 
 // ==========================================
-// 粒子/星光背景（Canvas实现，性能优异）
+// 拉布拉多犬动态形象（真实图片 + 左右移动）
 // ==========================================
-function initParticles(sidebar) {
-  // 移动端跳过粒子效果以节省性能
+function initLabrador(sidebar) {
+  // 移动端跳过
   if (window.innerWidth < 961) return;
 
-  const canvas = document.createElement('canvas');
-  canvas.className = 'sidebar-particles';
-  canvas.setAttribute('aria-hidden', 'true');
-  sidebar.insertBefore(canvas, sidebar.firstChild);
+  // 找到插入位置：sidebar__list（社交媒体）之后、welcome-text（引言）之前
+  const socialList = sidebar.querySelector('.sidebar__list');
+  if (!socialList) return;
 
-  const ctx = canvas.getContext('2d');
-  let particles = [];
-  let animId;
-  let mouseX = -1000;
-  let mouseY = -1000;
+  const container = document.createElement('div');
+  container.className = 'sidebar-labrador';
+  container.setAttribute('aria-hidden', 'true');
+  container.innerHTML = `
+    <div class="labrador-walk-area">
+      <img
+        class="labrador-dog"
+        src="/img/labrador.png"
+        alt="labrador"
+        draggable="false"
+      />
+    </div>
+  `;
 
-  // 粒子配置
-  const PARTICLE_COUNT = 35;
-  const CONNECTION_DIST = 120;
-  const PARTICLE_SPEED = 0.3;
+  // 插入到社交媒体列表之后
+  socialList.insertAdjacentElement('afterend', container);
 
-  function resize() {
-    const rect = sidebar.getBoundingClientRect();
-    canvas.width = rect.width;
-    canvas.height = rect.height;
-  }
+  // 左右移动（仅在博客列表页，文章详情页保持静止）
+  const dog = container.querySelector('.labrador-dog');
+  if (!dog) return;
 
-  resize();
-  window.addEventListener('resize', resize);
+  // 判断是否为博客列表页（/blog/ 或 /blog/page/N/），文章详情页不移动
+  const isBlogList = /^\/blog(\/page\/\d+\/?)?\/?$/.test(window.location.pathname);
+  if (!isBlogList) return;
 
-  // 鼠标移动跟踪（粒子轻微跟随）
-  sidebar.addEventListener('mousemove', function (e) {
-    const rect = sidebar.getBoundingClientRect();
-    mouseX = e.clientX - rect.left;
-    mouseY = e.clientY - rect.top;
-  });
+  let direction = 1; // 1 = 向右, -1 = 向左
+  let currentLeft = 50; // 起始位置百分比
 
-  sidebar.addEventListener('mouseleave', function () {
-    mouseX = -1000;
-    mouseY = -1000;
-  });
-
-  // 检测暗色主题
-  function isDarkTheme() {
-    return document.documentElement.classList.contains('theme--dark') ||
-           document.documentElement.getAttribute('data-theme') === 'dark';
-  }
-
-  // 初始化粒子
-  function createParticles() {
-    particles = [];
-    for (let i = 0; i < PARTICLE_COUNT; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * PARTICLE_SPEED,
-        vy: (Math.random() - 0.5) * PARTICLE_SPEED,
-        radius: Math.random() * 2 + 0.8,
-        alpha: Math.random() * 0.5 + 0.2,
-        alphaDir: Math.random() > 0.5 ? 0.003 : -0.003,
-      });
-    }
-  }
-
-  createParticles();
-
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    const dark = isDarkTheme();
-    const particleColor = dark ? '180, 200, 255' : '100, 120, 180';
-    const lineColor = dark ? '140, 160, 220' : '120, 140, 200';
-
-    // 更新并绘制粒子
-    for (let i = 0; i < particles.length; i++) {
-      const p = particles[i];
-
-      // 移动
-      p.x += p.vx;
-      p.y += p.vy;
-
-      // 边界反弹
-      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-
-      // 透明度呼吸
-      p.alpha += p.alphaDir;
-      if (p.alpha > 0.7 || p.alpha < 0.15) p.alphaDir *= -1;
-
-      // 鼠标吸引（轻微）
-      if (mouseX > 0 && mouseY > 0) {
-        const dx = mouseX - p.x;
-        const dy = mouseY - p.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 150) {
-          p.vx += (dx / dist) * 0.02;
-          p.vy += (dy / dist) * 0.02;
-          // 阻尼
-          p.vx *= 0.995;
-          p.vy *= 0.995;
-        }
-      }
-
-      // 限速
-      const speed = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
-      if (speed > PARTICLE_SPEED * 1.5) {
-        p.vx = (p.vx / speed) * PARTICLE_SPEED * 1.5;
-        p.vy = (p.vy / speed) * PARTICLE_SPEED * 1.5;
-      }
-
-      // 绘制粒子
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(${particleColor}, ${p.alpha})`;
-      ctx.fill();
-
-      // 绘制连线（仅连接近距离粒子）
-      for (let j = i + 1; j < particles.length; j++) {
-        const p2 = particles[j];
-        const dx = p.x - p2.x;
-        const dy = p.y - p2.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-
-        if (dist < CONNECTION_DIST) {
-          const lineAlpha = (1 - dist / CONNECTION_DIST) * 0.25;
-          ctx.beginPath();
-          ctx.moveTo(p.x, p.y);
-          ctx.lineTo(p2.x, p2.y);
-          ctx.strokeStyle = `rgba(${lineColor}, ${lineAlpha})`;
-          ctx.lineWidth = 0.5;
-          ctx.stroke();
-        }
-      }
+  function updatePosition() {
+    // 随机改变方向（20% 概率）
+    if (Math.random() < 0.2) {
+      direction *= -1;
     }
 
-    animId = requestAnimationFrame(animate);
+    // 每次移动 8% ~ 20% 的大幅度
+    currentLeft += direction * (8 + Math.random() * 12);
+
+    // 边界检测
+    if (currentLeft > 85) {
+      currentLeft = 85;
+      direction = -1;
+    } else if (currentLeft < 15) {
+      currentLeft = 15;
+      direction = 1;
+    }
+
+    // 根据方向翻转图片
+    dog.style.transform = direction === 1 ? 'scaleX(1)' : 'scaleX(-1)';
+
+    dog.style.left = currentLeft + '%';
+
+    // 每 1 秒移动一次
+    setTimeout(updatePosition, 1000);
   }
 
-  animate();
-
-  // 主题切换时重建粒子颜色会自动适配（通过 isDarkTheme 实时检测）
+  // 立即开始移动
+  updatePosition();
 }
 
 // ==========================================
@@ -204,7 +126,6 @@ function initAvatarGlow(sidebar) {
   const avatar = sidebar.querySelector('.sidebar__introduction-profileimage');
   if (!avatar) return;
 
-  // 包裹头像以添加光晕
   const wrapper = document.createElement('div');
   wrapper.className = 'avatar-glow-wrapper';
   avatar.parentNode.insertBefore(wrapper, avatar);
